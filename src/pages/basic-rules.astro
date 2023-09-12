@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+
+<Layout>
+  <main>
+    <h1 class="page-title">Basic Rules</h1>
+    <ul role="list" class="rule-grid">
+    <RuleBlock 
+    name="Dividing Numbers" 
+    description="Whenever you divide a number in the game, always round down if there is a fraction, even if the fraction is one-half or greater."
+    />
+    <RuleBlock 
+    name="Negative Damage or Healing"
+    description="It is possible to deal 0 damage, but never negative damage. As well as to heal 0 damage, but never negative healing."
+    />
+    <RuleBlock
+    name="Critical Success & Failure"
+    description={"Certain d20 rolls can automatically succeed or fail. Those are attack rolls and Saving Throws, which will be described further below. " +
+      "A critical success is defined as rolling a '20' on the d20." +
+      "A critical failure is defined as rolling a '1' on the d20."}
+    />
+    <RuleBlock
+    name="Attack Roll"
+    description="When a character wants to attack a target, they must roll a d20 and add proficiency and relevant modifiers." {/*TODO*/}
+    />
+    <RuleBlock
+    name="Critical Hits (natural 20)"
+    description="When you get critical success on an attack, roll all damage dice twice and add them together. Afterwards, add relevant modifiers as normal."
+    />
+    <RuleBlock
+    name="Saving Throws"
+    description="A saving throw [save] is an attempt to resist a threat. You are forced to make one because your character is at risk. To make a saving throw, roll a d20 and add the appropriate ability modifier. Each class has proficiency in at least two saving throws."
+    />
+    <RuleBlock 
+    name="Skills"
+    description="Skills that impact you characters performance based upon their stats."
+    <ul>
+      <li>Strength: Athletics, Intimidation<li>
+      <li>Dexterity: Acrobatics, Sleight of Hand, Stealth<li>
+      <li>Intelligence: Arcana, History, Investigation, Nature, Religion<li>
+      <li>Wisdom: Animal Handling, Insight, Medicine, Perception, Survival<li>
+      <li>Charisma: Deception, Performance, Persuasion<li>
+    </ul>
+    />
+    <RuleBlock 
+    name="Ability Checks"
+    description="When a character attemps to do something that requires skill. The GM decides which ability is relevant to the task and the Difficulty Class [DC] of the task. Roll a d20 + proficiency + modifiers, equalling or exceeding the DC determines success."
+    />
+    <RuleBlock
+    name="Advantage and Disadvantage"
+    description="For either ruling, roll two d20s when you make the roll. If you have advantage use the higher of the two rolls, and use the lower roll if you have disadvantage.\n If multiple rulings affect a roll you don't roll more than one additional d20.\n If a roll has at least one advantage and at least one disadvantage, The effects cancel out and one d20 is rolled."
+    />
+    </ul>
+</main>
+</Layout>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .page-title {
+    padding: 1rem;
+    color: rgb(var(--accent-light));
+    margin-left: 50%;
+  }
+  .rule-grid {
+			display: grid;
+      grid-template-columns: none;
+			/* grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr)); */
+			gap: 1rem;
+	}
+  li {
+    /* padding: 1rem; */
+    /* margin-bottom: 1rem; */
+    color:white;
+    transition: 5s ease-out;
+  }
+  ul:hover {
+    color: black;
+    /* transition: 3s ease-in; */
+  }
+</style>

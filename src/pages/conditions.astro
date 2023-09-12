@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+
+<Layout>
+  <main>
+    <h1 class="page-title">Conditions</h1>
+    <ul class="rule-grid">
+      <RuleBlock
+        name="Blinded"
+        description="The creature cannot see, fails any ability checks that require sight, their attacks have Disadvantage, and attacks against the creature have Advantage."
+      />
+      <RuleBlock
+        name="Deafened"
+        description="The creature cannot hear and fails any ability check that requires hearing."
+      />
+      <RuleBlock
+        name="Charmed"
+        description="The creature can't target the charmer with attacks, harmful abilities, or spells. The charmer has Advantage on any ability check to interact socially with the creature."
+      />
+      <RuleBlock
+        name="Poisoned"
+        description="The creature has Disadvantage on attacks and ability checks"
+      />
+      <RuleBlock
+        name="Frightened"
+        description="While the source of the creature's fear is within the creature’s line of sight, the creature can't willingly move closer to the source of its fear and the creature has Disadvantage on attack rolls and ability checks."
+      />
+      <RuleBlock
+        name="Restrained"
+        description="A restrained creature's speed becomes 0, and it can't benefit from bonuses to its speed. The creature has Disadvantage on attack rolls and Dexterity saving throws. Attack rolls against the creature have Advantage."
+      />
+      <RuleBlock
+        name="Invisible | Hidden | Unseen"
+        description="" {/*TODO */}
+      />
+    </ul>
+  </main>
+</Layout>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .page-title {
+    padding: 1rem;
+    color: rgb(var(--accent-light));
+    margin-left: 50%;
+  }
+  .rule-grid {
+			display: grid;
+      grid-template-columns: none;
+			/* grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr)); */
+			gap: 1rem;
+	}
+</style>

@@ -1,0 +1,123 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout>
+	<main>
+		<h1>Creative Commons <span class="text-gradient">D&D 5e</span></h1>
+		<p class="instructions">
+			This a website to help run a physical or virtual tabletop session of D&D 5e. 
+			<br><br>Read the <a href="#">about</a> and <a href="#">change log</a>
+		</p>
+		<ul role="list" class="link-card-grid">
+			
+			<Card
+				href="/basic-rules/"
+				title="Basic Rules"
+				body="Learn the foundational rules to play D&D 5e."
+			/>
+			<Card
+				href="/conditions/"
+				title="Conditions"
+				body="Learn about the conditions characters are affected by."
+			/>
+			<Card
+				href="/vision-light/"
+				title="Vision and Light"
+				body="The rules for how characters see and how light is emitted."
+			/>
+			<Card
+				href="/adventuring/"
+				title="Adventuring"
+				body="The actions characters can take as they roam the world or dive into a dungeon."
+			/>
+			<Card
+				href="/combat-encounters/"
+				title="Combat Encounters"
+				body="The rules for how to play during combat."
+			/>
+			<Card
+				href="/combat-actions/"
+				title="Combat Actions"
+				body="The actions that characters can use during combat."
+			/>
+			<Card
+				href="/movement/"
+				title="Movement"
+				body="The rules for how characters move throughout the game; terrain, hazards, flying, swimming, falling, etc."
+			/>
+			<Card
+				href="/space/"
+				title="Space"
+				body="How the characters interact with space in the game. (terrain, hazards, flying, swimming, falling, etc.)"
+			/>
+			<Card
+				href="/damage-healing/"
+				title="Damage and Healing"
+				body=""
+			/>
+			<Card
+				href="/dying-death/"
+				title="Dying and Death"
+				body=""
+			/>
+			<Card
+				href="/spellcasting/"
+				title="Spellcasting"
+				body=""
+			/>
+			<Card
+				href="/weapon-attack-properties/"
+				title="Weapon Properties, Unarmed Strikes, and Two Weapon Fighting"
+				body=""
+			/>
+			<Card
+				href="/merchants-items/"
+				title="Merchants and Items"
+				body=""
+			/>
+		</ul>
+	</main>
+
+	<style>
+		main {
+			margin: auto;
+			padding: 1rem;
+			width: 800px;
+			max-width: calc(100% - 2rem);
+			color: white;
+		}
+		h1 {
+			font-size: 3rem;
+			font-weight: 700;
+			text-align: center;
+			margin-bottom: 1rem;
+		}
+		.text-gradient {
+			background-image: var(--accent-gradient);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 400%;
+			background-position: 0%;
+		}
+		.instructions {
+			text-align: center;
+			font-size: 1.1rem;
+			margin-bottom: 1rem;
+			border: 1px solid rgba(var(--accent-light), 25%);
+			background: linear-gradient(
+				rgba(var(--accent-dark), 66%),
+				rgba(var(--accent-dark), 33%)
+			);
+			padding: 1.5rem;
+			border-radius: 8px;
+		}
+		.link-card-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+			gap: 1rem;
+			padding: 0;
+		}
+	</style>
+</Layout>
