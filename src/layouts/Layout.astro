@@ -17,6 +17,10 @@
 	</body>
 </html>
 <style is:global>
+	* {
+		padding: 0;
+		list-style: none;
+	}
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -31,5 +35,47 @@
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
+		color: #eee;
+	}
+	.page-title {
+    padding: 1rem;
+    color: rgb(var(--accent-light));
+		text-align: center;
+		margin: 0;
+  }
+	.rule-name {
+    color: #ccc;
+  }
+  .rule-grid {
+			display: grid;
+			gap: 1rem;
+			margin: 0;
+	}
+	.rule-card {
+    margin: auto;
+		list-style: none;
+    width: calc(100% - 2rem);
+    max-width: 28rem;
+		border-radius: 7px;
+    padding: 0rem 0.8rem;
+		background: #23262d;
+    background-image: none;
+    background-size: 400%;
+		background-position: 100%;
+    transition: 0.5s ease-out;
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	}
+  .rule-card:is(:hover, :focus-within) {
+		background: rgb(var(--accent-light));
+    transition: 0.5s ease-in;
+	}
+	.rule-card:is(:hover, :focus-within) .rule-name {
+    color: rgba(var(--accent-dark), 100%);
+	}
+	.rule-card:is(:hover, :focus-within) p {
+    color: #212;
+	}
+	ul {
+		margin-bottom: 0.8rem;
 	}
 </style>

@@ -1,50 +1,12 @@
 ---
-const { name, description, extra } = Astro.props;
+const { name, description } = Astro.props;
 ---
-
-<section class="rule-block">
+<div class="rule-block">
   <h3 class="rule-name">{name}</h3>
   <p class="rule-description">{description}</p>
-  <!-- <p class="rule-description">{extra} -->
-  <slot class="input" />
-</section>
+</div>
 <style>
-  section {
-    margin: auto;
-		list-style: none;
-    width: calc(100% - 2rem);
-    max-width: 28rem;
-		border-radius: 7px;
-    padding: 0rem 0.8rem;
-		background: #23262d;
-    background-image: none;
-    background-size: 400%;
-		background-position: 100%;
-    transition: 0.5s ease-out;
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-  section:is(:hover, :focus-within) {
-		background: rgb(var(--accent-light));
-    transition: 0.5s ease-in;
-	}
-	section:is(:hover, :focus-within) h3 {
-    color: rgba(var(--accent-dark), 100%);
-	}
-	section:is(:hover, :focus-within) p {
-    color: #212;
-	}
-  section > li {
-    color: green;
-  }
-  .rule-name {
-    color: #ccc;
-    padding-top: 0.8rem;
-  }
-  .rule-description {
-    color: #eee;
-    padding-bottom: 0.8rem;
-  }
-  .input {
-    padding-bottom: 0.8rem;
+  * {
+    list-style: none;
   }
 </style>

@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+
+<Layout>
+  <main>
+    <h1 class="page-title">Vision and Light</h1>
+    <ul role="list" class="rule-grid">
+      <section class="rule-card">
+      <RuleBlock
+        name="Bright Light"
+        description="An illuminated are where most creatures see normally."
+      />
+      </section>
+      <section class="rule-card">
+      <RuleBlock
+      name="Dim Light"
+      description="Creates a lightly obscured area. Creatures have Disadvantage on Perception checks that rely on sight. Usually, patches of fog, sections of the Underdark, foliage, or dusk."
+      />
+      </section>
+      <section class="rule-card">
+      <RuleBlock
+        name="Darkness"
+        description="Creates a heavily obscured area. Creatures in darkness automatically fail any ability check that requires sight, attack rolls against them have advantage, and their attack rolls have disadvantage."
+      />
+      </section>
+      <section class="rule-card">
+      <RuleBlock
+        name="Seeing Underwater"
+        description="In clear water and bright light a creature can perceive at 60 feet, in dim murky water at 10 feet, and 30 feet for any mixture of conditions in between."
+      />
+      </section>
+      <section class="rule-card">
+      <RuleBlock
+        name="Darkvision"
+        description="The creature can see in darkness as if it were dim light, within a specific radius. The creature can't discern color in darkness, only shades of gray."
+      />
+      </section>
+      <section class="rule-card">
+      <RuleBlock
+        name="Blindsight"
+        description="The creature can perceive its surroundings without relying on sight, within a specific radius."
+      />
+      </section>
+      <section class="rule-card">
+      <RuleBlock
+        name="Truesight"
+        description="The creature can perceive out to a specific range: anything in normal and magical darkness, invisible creatures and objects, automatically detect visual illusions and succeed on saving throws against them. Can Detect the original form of a shapechanger or a creature that is transformed by magic and the creature can perceive into the Ethereal Plane."
+      />
+      </section>
+      <section class="rule-card">
+      <RuleBlock
+        name="Torch"
+        description="A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+      />
+      </section>
+      <section class="rule-card">
+      <RuleBlock  
+        name="Candle"
+        description="For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
+      />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Lamp"
+          description="A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Bullseye Lantern"
+          description="A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock name="Hooded Lantern" />
+        <p>A hooded lantern casts <span class="rule-name">bright light</span> in a 30-foot radius and <span class="rule-name">dim light</span> for an additional 30 feet.</p>
+        <p>Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the emitted light to <span class="rule-name">dim light</span> in a 5-foot radius.</p>
+      </section>
+      </ul>
+  </main>
+</Layout>

@@ -5,7 +5,7 @@ import Card from "../components/Card.astro";
 
 <Layout>
 	<main>
-		<h1>Creative Commons <span class="text-gradient">D&D 5e</span></h1>
+		<h1>Creative Commons <span class="text">D&D 5e</span></h1>
 		<p class="instructions">
 			This a website to help run a physical or virtual tabletop session of D&D 5e. 
 			<br><br>Read the <a href="#">about</a> and <a href="#">change log</a>
@@ -24,7 +24,7 @@ import Card from "../components/Card.astro";
 			/>
 			<Card
 				href="/vision-light/"
-				title="Vision and Light"
+				title="Vision & Light"
 				body="The rules for how characters see and how light is emitted."
 			/>
 			<Card
@@ -35,7 +35,7 @@ import Card from "../components/Card.astro";
 			<Card
 				href="/combat-encounters/"
 				title="Combat Encounters"
-				body="The rules for how to play during combat."
+				body="The rules for how to conduct a combat encounter."
 			/>
 			<Card
 				href="/combat-actions/"
@@ -45,7 +45,7 @@ import Card from "../components/Card.astro";
 			<Card
 				href="/movement/"
 				title="Movement"
-				body="The rules for how characters move throughout the game; terrain, hazards, flying, swimming, falling, etc."
+				body="How characters move within the game. Whether by terrain, hazards, flying, swimming, falling, etc."
 			/>
 			<Card
 				href="/space/"
@@ -54,12 +54,12 @@ import Card from "../components/Card.astro";
 			/>
 			<Card
 				href="/damage-healing/"
-				title="Damage and Healing"
-				body=""
+				title="Damage & Healing"
+				body="Learn about damage types, resistance, vulnerability, etc."
 			/>
 			<Card
 				href="/dying-death/"
-				title="Dying and Death"
+				title="Dying & Death"
 				body=""
 			/>
 			<Card
@@ -69,8 +69,8 @@ import Card from "../components/Card.astro";
 			/>
 			<Card
 				href="/weapon-attack-properties/"
-				title="Weapon Properties, Unarmed Strikes, and Two Weapon Fighting"
-				body=""
+				title="Weapon Properties"
+				body="Includes Unarmed Strikes and Two Weapon Fighting."
 			/>
 			<Card
 				href="/merchants-items/"
@@ -94,12 +94,8 @@ import Card from "../components/Card.astro";
 			text-align: center;
 			margin-bottom: 1rem;
 		}
-		.text-gradient {
-			background-image: var(--accent-gradient);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-			background-size: 400%;
-			background-position: 0%;
+		.text {
+			color: rgb(var(--accent-light));
 		}
 		.instructions {
 			text-align: center;

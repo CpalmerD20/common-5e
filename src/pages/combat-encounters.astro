@@ -1,10 +1,64 @@
-<h1>Combat Encounters: UNDER CONSTRUCTION</h1>
-<style>
-  body {
-    color: #eee;
-    background: #222;
-  }
-  h1 {
-    padding: 4rem;
-  }
-</style>
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+<Layout>
+  <main>
+    <h1 class="page-title">Combat Encounters</h1>
+    <ul class="rule-grid">
+    <section class="rule-card">
+      <RuleBlock
+        name="Before Combat"
+        description="If applicable, the GM determines whether anyone involved in combat is surprised or if an ambush was successful."
+      />
+    </section>
+    <section class="rule-card">
+      <RuleBlock
+        name="Roll Initiative"
+        description="Everyone involved in combat rolls initiative [ D20 + DEX modifier ]. The GM determines the order of combatants' turns and where all creatures are located."
+      />
+    </section>
+    <section class="rule-card">
+      <RuleBlock
+        name="Take Turn"
+        description="Each participant in the battle takes a turn in initiative order."
+      />
+      <p>On each turn, their resources are set to their “movement speed”, one “reaction”, one “action”, and one “bonus action”. A turn can include a thematic flourish that requires no resource, and short communication through brief utterances or gestures (something within 6 seconds).</p>
+      <p>If a creature uses an action that includes more than one weapon
+        attack, they can use their movement to move between those attacks.</p>
+    </section>
+    <section class="rule-card">
+      <RuleBlock
+        name="Begin the Next Round"
+        description="A round is 6 to 10 seconds as dictated by the Game Master."
+      />
+      <p>After all combatants have had a turn, the round ends. Repeat Taking Turns until the fighting stops.</p>
+    </section>
+    <section class="rule-card">
+      <RuleBlock
+        name="Reactions"
+        description="A reaction is a response to a trigger of some kind, which can occur anytime in the round."
+      />
+      <p>When a creature uses their reaction, they can’t take another one until the start of their next turn.</p>
+    </section>
+    <section class="rule-card">
+      <RuleBlock
+        name="Opportunity Attack"
+        description="When a hostile creature, you can see, moves out of your reach. You can use a reaction to make one melee attack."
+      />
+      <p>This isn’t possible when a creature moves without using their movement.</p>
+      <p>For example, creatures don’t provoke an opportunity attack if a spell hurls them
+        from a foe’s reach or if gravity causes them to fall past an enemy.</p>
+    </section>
+    <section class="rule-card">
+      <RuleBlock
+        name="Interactions"
+        description="During their turn, a creature can perform one simple interaction with an object or feature of the environment for free."
+      />
+      <p>Examples: a creature could open a door as they stride toward a foe, release their hold on something, or they could draw their weapon.</p>
+      <p>If a creature tries to make a second interaction with any object, they have to use an action to do so.</p>
+      <p><strong>Complex interactions</strong> may require an action as determined by the Game Master. Some magic items and other special objects always require an action to use, as stated in their descriptions.</p>
+    </section>
+  </ul>
+  </main>
+</Layout>

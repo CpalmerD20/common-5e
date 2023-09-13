@@ -1,10 +1,80 @@
-<h1>Space: UNDER CONSTRUCTION</h1>
-<style>
-  body {
-    color: #eee;
-    background: #222;
-  }
-  h1 {
-    padding: 4rem;
-  }
-</style>
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+<Layout>
+  <main>
+    <h1 class="page-title">Adventuring Space</h1>
+    <ul role="list" class="rule-grid">
+      <section class="rule-card">
+        <RuleBlock
+          name="Creature Space"
+          description="A creature’s space is not its physical dimensions, rather the space a creature needs to fight effectively."
+        />
+        <p>Tiny 2.5 by 2.5 feet</p>
+        <p>Small or Medium 5 by 5 feet</p>
+        <p>Large 10 by 10 feet</p>
+        <p>Huge 15 by 15 feet</p>
+        <p>Gargantuan 20 by 20 feet or more</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Reach"
+          description="Default 5 feet, a creature can target melee attacks on other creatures within their reach. Specific creatures or weapons have melee attacks with a greater reach than 5 feet."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Squeezing Into a Smaller Space"
+          description="A creature can squeeze through a space that is one size smaller than it. Squeezing through a smaller space counts as difficult terrain."
+        />
+        <p>While a creature is squeezing in a smaller space it has Disadvantage
+          on attack rolls and Dexterity saving throws. Attack rolls against the
+          creature have Advantage.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Cover"
+          description="Structures or creatures can provide cover during combat. A target can benefit from cover only when an attack or effect originates on the opposite side of the cover source and only the most protective degree of cover applies."
+        />
+        <p><strong>Partial Cover</strong>: a target with half their body behind cover has a +2 bonus to AC and Dexterity Saving Throws.</p>
+        <p><strong>Full Cover</strong>: a target with three-quarters of their body behind cover has a +5 bonus to AC and Dexterity Saving Throws. The obstacle might be a portcullis, or an arrow slit.</p>
+        <p><strong>Total Cover</strong>: a target with the entirety of their body behind cover can’t be targeted directly by an attack or a spell, although the target can be reached by including it in an area of effect.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Ranged Attacks"
+          description="Creatures can make ranged attacks only against targets within a specified range and cannot target beyond this range."
+        />
+        <p>If a hostile, non-incapacitated creature is within 5 feet of a creature attempting a ranged attack, they have Disadvantage on their ranged attack.</p>
+        <p><strong>Two Attack Ranges</strong>: the smaller number is the normal range, and the larger number is the long range. Attack rolls on targets in long range have Disadvantage.</p>
+        <p><strong>Ranged attacks through bodies of water</strong>: do 0 damage beyond the weapon or spell’s normal range.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Water Combat"
+          description="For creatures or objects immersed in water."
+        />
+        <p>Each immersed creature has resistance to fire damage. Ranged weapon attacks roll with Disadvantage unless the weapon is a crossbow, net, or thrown weapon.</p>
+        <p>When making a melee weapon attack without a swimming speed, the attack roll has Disadvantage unless the attack deals piercing damage.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Mounted Combat"
+          description="Willing creatures can serve as a mount provided they are: trained to accept a rider, at least one size larger than the rider, and have an appropriate anatomy."
+        />
+        <p>If the mount provokes an opportunity attack while you’re on it, the attacker can target you or the mount.</p>
+        <p><strong>Mounting</strong>: once during your turn for half your speed, you can mount or dismount a creature that is within 5 feet of you. You can’t mount if your current movement is less than half your speed. If the mount already had a turn this round, it can’t act or move until the next.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+        name="Riding a mount"
+        description="While mounted you can control the mount or allow it to act on its own. Intelligent creatures, such as dragons, always act independently."
+        />
+        <p><strong>Riding</strong>: if an effect moves your mount against its will while you’re on it or the mount is knocked prone you must succeed on a DC 10 Dexterity saving throw, or fall off the mount landing prone in a space within 5 feet of it.</p>
+        <p><strong>Controlled Mounts</strong>: their initiative moves to their rider's and their only available actions are Dash, Disengage, and Dodge.</p>
+        <p><strong>Independent Mounts</strong>: retain their place in the initiative order and move and act as they wish, with no restrictions from their stat block.</p>
+      </section>
+    </ul>
+  </main>
+</Layout>
