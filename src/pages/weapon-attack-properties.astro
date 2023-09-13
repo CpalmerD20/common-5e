@@ -1,10 +1,130 @@
-<h1>Weapon Properties: UNDER CONSTRUCTION</h1>
-<style>
-  body {
-    color: #eee;
-    background: #222;
-  }
-  h1 {
-    padding: 5rem;
-  }
-</style>
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+
+<Layout>
+  <main>
+    <h1 class="page-title">Weapon and Attack Properties</h1>
+    <ul role="list" class="rule-grid">
+      <section class="rule-card">
+        <RuleBlock
+          name="Unarmed Strike"
+          description="Within the creature's reach a punch, kick, or headbutt. An unarmed strike deals bludgeoning damage equal to 1 + Strength modifier. All creatures are proficient with unarmed strikes."
+        />
+        <p>
+          While Unarmed Strikes are not weapons, they do fall under the category
+          of a "Melee Weapon Attack" when adjudicating rules.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Improvised Weapons"
+          description="An improvised weapon is any object that can be wielded in one or two hands, such as broken glass, a frying pan, or a wagon wheel."
+        />
+        <p>
+          If an improvised weapon is <strong
+            >similar to a simple melee weapon</strong
+          >, it can be ruled as if it is that weapon. Objects that have no
+          resemblance to any weapon deal 1d4 damage and the Game Master assigns
+          a damage type.
+        </p>
+        <p>
+          If a character uses a ranged weapon to make a melee attack, or throws
+          a melee weapon that does not have the thrown property, it deals 1d4
+          damage. A thrown object has a range of (20 / 60) feet.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Thrown"
+          description="A weapon you can throw the weapon to make a ranged attack."
+        />
+        <p>
+          Use the same ability modifier for the attack and damage rolls that you
+          would to make a melee attack with the weapon.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Light"
+          description="A weapon with the light property is small and easy to handle, making it possible for fighting with two weapons."
+        />
+        <RuleBlock name="Two Weapon Fighting" />
+        <p>
+          When you take the attack action with a light melee weapon that you’re
+          holding in one hand, you can use a bonus action to attack with a light
+          melee weapon that you’re holding in the other hand. If either weapon
+          has the thrown property, you can throw either weapon for each attack.
+        </p>
+        <p>
+          Don’t add the ability modifier to the damage of the bonus action
+          attack.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Loading"
+          description="A weapon with the loading property requires a free hand to load the weapon."
+        />
+        <p>
+          Regardless of the number of attacks you can make, you can fire one
+          piece of ammunition from it when you use an action, bonus action, or
+          reaction to fire it.
+        </p>
+        <RuleBlock
+          name="Ammunition"
+          description="Each time a ranged attack with the weapon is made, specified ammunition is drawn from its container and the attacker spends the ammunition to perform the attack."
+        />
+        <p>
+          If the container is out of ammunition then the weapon’s damage dice
+          cannot be used for a ranged attack. The weapon itself would have to be
+          thrown as an improvised weapon instead.
+        </p>
+        <p>
+          At the end of the battle, you can recover half your expended
+          ammunition by using a few minutes to search the battlefield.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Heavy"
+          description="Small creatures have disadvantage on attack rolls with heavy weapons. Tiny creatures cannot wield them at all."
+        />
+        <RuleBlock
+          name="Reach"
+          description="A weapon with the reach property adds 5 feet to the character's reach when they attack with it or use a reaction for a Opportunity Attack."
+        />
+        <RuleBlock
+          name="Special"
+          description="A weapon with the special property (net and lance) has unique traits that need to be read on their item description."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Two-Handed"
+          description="A weapon with this property requires a two-handed grip to attack with."
+        />
+        <RuleBlock
+          name="Versatile"
+          description="A weapon with this property can be used with one or two hands. When a two-handed attack hits with the weapon, add +2 to the damage total."
+        />
+        <RuleBlock
+          name="Finesse"
+          description="For a weapon with the finesse property the creature uses the higher modifier value from Strength or Dexterity (not both) for the Attack and Damage calcuations with the weapon."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Silvered"
+          description="Some monsters have immunity or resistance to non magical weapons, but are susceptible to silver weapons."
+        />
+        <p>
+          You can silver a single weapon or ten pieces of ammunition for 100 gp.
+          This cost represents the price of the silver, and the time needed to
+          add silver to the weapon without making it less effective.
+        </p>
+      </section>
+    </ul>
+  </main>
+</Layout>

@@ -9,116 +9,149 @@ import RuleBlock from "../components/RuleBlock.astro";
     <ul class="rule-grid">
       <section class="rule-card">
         <RuleBlock
-        name="Blinded"
-        description="The creature cannot see, fails any ability checks that require sight, their attacks have Disadvantage, and attacks against the creature have Advantage."
+          name="Blinded"
+          description="The creature cannot see, fails any ability checks that require sight, their attacks have Disadvantage, and attacks against the creature have Advantage."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Deafened"
-        description="The creature cannot hear and fails any ability check that requires hearing."
+          name="Deafened"
+          description="The creature cannot hear and fails any ability check that requires hearing."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Charmed"
-        description="The creature can't target the charmer with attacks, harmful abilities, or spells. The charmer has Advantage on any ability check to interact socially with the creature."
+          name="Charmed"
+          description="The creature can't target the charmer with attacks, harmful abilities, or spells. The charmer has Advantage on any ability check to interact socially with the creature."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Poisoned"
-        description="The creature has Disadvantage on attacks and ability checks"
+          name="Poisoned"
+          description="The creature has Disadvantage on attacks and ability checks"
         />
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Frightened"
-        description="While the source of the creature's fear is within the creature’s line of sight, the creature can't willingly move closer to the source of its fear and the creature has Disadvantage on attack rolls and ability checks."
+          name="Frightened"
+          description="While the source of the creature's fear is within the creature’s line of sight, the creature can't willingly move closer to the source of its fear and the creature has Disadvantage on attack rolls and ability checks."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Restrained"
-        description="A restrained creature's speed becomes 0, and it can't benefit from bonuses to its speed. The creature has Disadvantage on attack rolls and Dexterity saving throws. Attack rolls against the creature have Advantage."
+          name="Restrained"
+          description="A restrained creature's speed becomes 0, and it can't benefit from bonuses to its speed. The creature has Disadvantage on attack rolls and Dexterity saving throws. Attack rolls against the creature have Advantage."
         />
       </section>
       <section class="rule-card">
         <!-- TODO revisit -->
         <RuleBlock
-        name="Invisible | Hidden | Unseen"
-        description="The creature's location can only be detected by noise or any tracks it makes or magical means." 
+          name="Invisible | Hidden | Unseen"
+          description="The creature's location can only be detected by noise or any tracks it makes or magical means."
         />
-        <p>When a creature that can’t be seen is attacked, the roll has Disadvantage. Unseen creatures get Advantage while attacking a seen target.</p>
-        <p>[Homebrew] If a creature is unseen or hidden, they can make an attack
+        <p>
+          When a creature that can’t be seen is attacked, the roll has
+          Disadvantage. Unseen creatures get Advantage while attacking a seen
+          target.
+        </p>
+        <p>
+          [Homebrew] If a creature is unseen or hidden, they can make an attack
           with Advantage and give away their location. otherwise the attack is
-          normal and the opponents can use their reaction to roll Perception (DC 15) to
-          detect the creature’s location.</p>
+          normal and the opponents can use their reaction to roll Perception (DC
+          15) to detect the creature’s location.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Grappled"
-        description="While a creature is Grappled they experience the following effects: their Speed is 0 and can’t change and the grappler can drag or carry them when it moves (as if they were in Difficult Terrain)."
+          name="Grappled"
+          description="While a creature is Grappled they experience the following effects: their Speed is 0 and can’t change and the grappler can drag or carry them when it moves (as if they were in Difficult Terrain)."
         />
-        <p> The Condition ends if something removes you from the grappler’s range, the grappler is incapacitated, the grappler is two sizes smaller than you, or you succeed in an Escape Contest.</p>
-      </section>
-      <section class="rule-card">
-        <RuleBlock  
-        name="Exhaustion"
-        description="While having any levels of exhaustion: the creature cannot concentrate on spells, deduct two from the creature’s Spell Save DC, and subtract two from all D20 rolls made for the creature."
-        />
-        <p>Each time exhaustion is received the creature gains one additional level of exhaustion. If a creature exceeds 5 levels of exhaustion it dies. A creature loses a single level of exhaustion each time it finishes a Long Rest.</p>
+        <p>
+          The Condition ends if something removes you from the grappler’s range,
+          the grappler is incapacitated, the grappler is two sizes smaller than
+          you, or you succeed in an Escape Contest.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Exhaustion Causes"
-        description="A creature recieves Exhaustion from: starvation, skipping long rests for longer than 16 hours, the long-term effects of severe temperatures, or any other endurance stressing event."
+          name="Exhaustion"
+          description="While having any levels of exhaustion: the creature cannot concentrate on spells, deduct two from the creature’s Spell Save DC, and subtract two from all D20 rolls made for the creature."
         />
+        <p>
+          Each time exhaustion is received the creature gains one additional
+          level of exhaustion. If a creature exceeds 5 levels of exhaustion it
+          dies. A creature loses a single level of exhaustion each time it
+          finishes a Long Rest.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Prone"
-        description="The creature is flat on the ground and can crawl. The creature has Disadvantage on attack rolls. Attack rolls against the creature have Advantage. The creature can spend half their movement to stand up."
-        />
-        <p>Attack rolls against the creature have disadvantage if the attack is made from further than 5 feet away. (For ranged attacks, Advantage and Disadvantage cancel out).</p>
-      </section>
-      <section class="rule-card">
-        <RuleBlock  
-        name="Surprised"
-        description="During the first round of combat, until the creature’s turn has passed: they cannot move, use an action, bonus action, or reaction."
+          name="Exhaustion Causes"
+          description="A creature recieves Exhaustion from: starvation, skipping long rests for longer than 16 hours, the long-term effects of severe temperatures, or any other endurance stressing event."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Incapacitated"
-        description="The creature can’t use actions, bonus actions, reactions, concentration. And, the creature can only speak falteringly."
+          name="Prone"
+          description="The creature is flat on the ground and can crawl. The creature has Disadvantage on attack rolls. Attack rolls against the creature have Advantage. The creature can spend half their movement to stand up."
+        />
+        <p>
+          Attack rolls against the creature have disadvantage if the attack is
+          made from further than 5 feet away. (For ranged attacks, Advantage and
+          Disadvantage cancel out).
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Surprised"
+          description="During the first round of combat, until the creature’s turn has passed: they cannot move, use an action, bonus action, or reaction."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
-        name="Stunned"
+          name="Incapacitated"
+          description="The creature can’t use actions, bonus actions, reactions, concentration. And, the creature can only speak falteringly."
         />
-        <p>The creature is <span class=rule-name>incapacitated</span>, cannot move, cannot speak, and Fails any Strength and Dexterity saving throws. Attack rolls against the creature have Advantage.</p>
       </section>
       <section class="rule-card">
-        <RuleBlock
-        name="Paralyzed"
-        />
-        <p>The creature is <span class=rule-name>incapacitated</span> and <span class="rule-name">stunned</span>. Attacks within 5 feet that hit the creature are critical.</p>
+        <RuleBlock name="Stunned" />
+        <p>
+          The creature is <span class="rule-name">incapacitated</span>, cannot
+          move, cannot speak, and Fails any Strength and Dexterity saving
+          throws. Attack rolls against the creature have Advantage.
+        </p>
       </section>
       <section class="rule-card">
-        <RuleBlock
-          name="Unconscious"
-        />
-        <p>The creature is <span class=rule-name>incapacitated, paralyzed, prone,</span> unaware of its surroundings, and drops whatever it has been holding.</p>
+        <RuleBlock name="Paralyzed" />
+        <p>
+          The creature is <span class="rule-name">incapacitated</span> and <span
+            class="rule-name">stunned</span
+          >. Attacks within 5 feet that hit the creature are critical.
+        </p>
       </section>
       <section class="rule-card">
-      <RuleBlock
-        name="Petrified"
-      />
-      <p>The creature is <span class=rule-name>incapacitated and stunned</span>, has resistance to all damage, maintains its HP, becomes an object with AC 15, and is immune to poison and psychic damage.</p>
-      <p>As an object it is immune to effects of Constitution, Intelligence, Wisdom, and Charisma Saving Throws. Its weight increases by a factor of ten and it ceases aging. Magic items the creature was wearing or carrying are not petrified.</p>
+        <RuleBlock name="Unconscious" />
+        <p>
+          The creature is <span class="rule-name"
+            >incapacitated, paralyzed, prone,</span
+          > unaware of its surroundings, and drops whatever it has been holding.
+        </p>
       </section>
-      </ul>
+      <section class="rule-card">
+        <RuleBlock name="Petrified" />
+        <p>
+          The creature is <span class="rule-name"
+            >incapacitated and stunned</span
+          >, has resistance to all damage, maintains its HP, becomes an object
+          with AC 15, and is immune to poison and psychic damage.
+        </p>
+        <p>
+          As an object it is immune to effects of Constitution, Intelligence,
+          Wisdom, and Charisma Saving Throws. Its weight increases by a factor
+          of ten and it ceases aging. Magic items the creature was wearing or
+          carrying are not petrified.
+        </p>
+      </section>
+    </ul>
   </main>
 </Layout>
