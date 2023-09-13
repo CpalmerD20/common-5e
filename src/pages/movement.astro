@@ -43,7 +43,7 @@ import RuleBlock from "../components/RuleBlock.astro";
         <section class="rule-card">
           <RuleBlock
             name="Swimming"
-            description="For each hour of swimming without a swim speed, creatures must succeed on a DC 15 CON Save or gain a level of exhaustion."
+            description="Without a swim speed each foot costs an additional foot of movement. For each hour of swimming without a swim speed, creatures must succeed on a DC 15 Constitution Save or gain a level of exhaustion."
           />
         </section>
         <section class="rule-card">
@@ -54,11 +54,15 @@ import RuleBlock from "../components/RuleBlock.astro";
           <p><strong>Long Jump</strong>: horizontal distance in feet equal to the creature's Strength score.
           <p><strong>High Jump</strong>: vertical distance in feet equal to the creature's Strength score divided by 3.</p>
           <p>If a creature moves at least 10 feet without using an action, they can jump up to their long jump or high jump distance. Otherwise, they can only jump half that distance.</p>
-          <p>When the jump distance exceeds the creature's remaining movement:</p>
-          <p>If a creature is benefiting from the Jump spell or is performing a long jump, the creature can still jump that distance. After landing their speed is 0. </p>
+          <p>When the jump distance exceeds the creature's remaining movement: if a creature is benefiting from the Jump spell, then the creature can still jump that distance. After landing their speed is 0. </p>
           <p>For all other forms of jumping, the creature can only jump as far as their remaining movement allows.</p>
         </section>
         <section class="rule-card">
+          <RuleBlock
+            name="Falling"
+            description="Creatures fall at a speed of 500 feet per round."
+          />
+          <p>After falling more than 10 feet and landing on terrain, creatures take bludgeoning damage equal to half the distance fallen.</p>
           <RuleBlock
             name="Landing"
             description="If a creature lands in difficult terrain (DC 10) or hazardous terrain (DC 15), they must succeed on an Acrobatics check to stay on their feet. Otherwise, they fall prone."
@@ -69,14 +73,8 @@ import RuleBlock from "../components/RuleBlock.astro";
             name="Flying"
             description="Creatures deal with the danger of falling, unless they have the ability to hover or are being held aloft by magic."
           />
+          <p>Creatures without a flying speed or the aid of specific spells cannot fly.</p>
           <p>A flying creature will fall if its flying speed is reduced to 0, it is knocked prone, or is otherwise deprived of the ability to move.</p>
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Falling"
-            description="Creatures fall at a speed of 500 feet per round."
-          />
-          <p>After falling more than 10 feet and landing on terrain, creatures take bludgeoning damage equal to half the distance fallen.</p>
         </section>
       </ul>
     </main>

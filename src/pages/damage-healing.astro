@@ -1,10 +1,101 @@
-<h1>Damage and Healing: UNDER CONSTRUCTION</h1>
-<style>
-  body {
-    color: #eee;
-    background: #222;
-  }
-  h1 {
-    padding: 4rem;
-  }
-</style>
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+<Layout>
+  <main>
+    <h1 class="page-title">Damage and Healing</h1>
+    <ul role="list" class="rule-grid">
+      <section class="rule-card">
+        <RuleBlock
+          name="Damage"
+          description="Whether a creature fails a Saving Throw or an Attack beats their Armor Class, damage deducts from a creature's current Hit Points."
+        />
+        <RuleBlock
+          name="Healing"
+          description="Points added to a creature’s current hit points. The hit points cannot exceed their hit point maximum. A creature that has died can’t regain hit points until magic such as the revivify spell has restored it to life."
+        />
+        <RuleBlock 
+          name="Negative Damage or Healing"
+          description="It is possible to deal 0 damage, but never negative damage. As well as to heal 0 damage, but never negative healing."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Damage Resistance"
+          description="If a creature or an object has resistance to a damage type, damage of that type is halved against it."
+        />
+        <RuleBlock
+          name="Damage Vulnerability"
+          description="If a creature or an object has vulnerability to a damage type, damage of that type is doubled against it."
+        />
+        <RuleBlock
+          name="Applying Either"
+          description="Resistance and vulnerability are applied last after all other modifiers to damage. Multiple instances of resistance or vulnerability that affect the same damage type count as only one instance."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Hit Points [HP]"
+          description="Hit Points represent physical and mental durability, the will to live, and luck."
+        />
+        <p>A creature’s current hit points can be any number from the creature’s hit point maximum down to 0. Whenever a creature takes damage, that damage is subtracted from its hit points.</p>
+        <RuleBlock
+          name="Hit Dice"
+          description="A creature’s total maximum Hit Dice is equal to the character’s level. They can be spent during a short rest. To spend, roll the die and add the character's Constitution modifier. The character regains hit points equal to the total. At the end of a long rest, The creature regains spent Hit Dice."
+        />
+        <RuleBlock
+          name="Hit Dice by Class"
+        />
+        <p>D6 &rarr; Sorcerer, Wizard</p>
+        <p>D8 &rarr; Bard, Cleric, Druid, Rogue, Warlock</p>
+        <p>D10 &rarr; Fighter, Monk, Paladin, Ranger</p>
+        <p>D12 &rarr; Barbarian</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Temporary Hit Points [THP]"
+          description="A buffer against damage."
+        />
+        <p>When damage is taken THP points are lost first and any leftover damage carries over to hit points. Healing will not restore THP. If you have temporary hit points and receive more of them, they don’t stack and you must choose one source of THP.</p>
+        <p>THP lasts until either their duration expires, the character finishes a Long Rest, or they are completely depleted from damage.</p>
+        <p>If you have 0 hit points, receiving temporary hit points does not restore consciousness or stabilize you. They will absorb damage directed at you while you’re in that state.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Knocking a Creature Out"
+          description="An attacker can incapacitate a foe rather than killing."
+        />
+        <p>When an attacker reduces a creature to 0 hit points with a melee attack, the attacker can choose to knock the creature out, the instant damage is dealt. If the attacker choose to knock out the creature, they fall unconscious and stable with 0 Hit Points.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Objects"
+          description="Objects can be damaged with weapons and spells. When an object drops to 0 hit points, it breaks."
+        />
+        <p>Also objects:</p>
+        <p>Always fail Strength and Dexterity Saving Throws.</p>
+        <p>Are immune to effects of all Non-DEX or Non-STR Saves.</p>
+        <p>Are immue to poison and psychic damage.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Damage Type Descriptions"
+        />
+        <p><strong>Bludgeoning</strong>: falling onto terrain, the force of a physical blow, or the constriction of a serpent.</p>
+        <p><strong>Piercing</strong>: the puncture of a tiger's teeth, the thrust of a spear, or a knife stabbing in.</p> 
+        <p><strong>Slashing</strong>: a cutting swing of a sword, a swipe from a set of claws, or a lobbed axe.</p>
+        <p><strong>Fire</strong>: the burning from immense heat.</p>
+        <p><strong>Cold</strong>: the immense freezing absence of heat.</p>
+        <p><strong>Lightning</strong>: the shock of an electric current permeating the body.</p>
+        <p><strong>Thunder</strong>: sonic waves and force emitting through matter.</p>
+        <p><strong>Psychic</strong>: emotional or cognitive damage that punishes the mind.</p>
+        <p><strong>Acid</strong>: damage from corrosion or dissolving enzymes.</p>
+        <p><strong>Poison</strong>: toxic liquids, vapor, or venomous stings.</p>
+        <p><strong>Force</strong>: pure magical energy focused into a damaging form.</p>
+        <p><strong>Nectotic</strong>: energy that decays the soul.</p>
+        <p><strong>Radiant</strong>: dazzling light that sears the spirit.</p>
+      </section>
+    </ul>
+  </main>
+</Layout>

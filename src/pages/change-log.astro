@@ -1,10 +1,42 @@
-<h1>Change Log: UNDER CONSTRUCTION</h1>
-<style>
-  body {
-    color: #eee;
-    background: #222;
-  }
-  h1 {
-    padding: 4rem;
-  }
-</style>
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+<Layout>
+  <main>
+    <h1 class="page-title">Change Log</h1>
+    <ul role="list" class="rule-grid">
+    <section class="rule-card">
+      <h2 class="rule-name">Removed Rules</h2>
+      <p>Removed getting "some" Hit Dice back per Long Rest. This is usually hand-waved or disproportionally affects characters who would fight in the front lines. I feel it's important that Hit Dice recovery and Spell Slot recovery are treated the same.</p>
+      <p>Some rule overhead while using a mount, effectively the same, more consistent, and easier to remember</p>
+    </section>
+    <section class="rule-card">
+      <h2 class="rule-name">Replaced Rules</h2>
+      <p>Monk's Hit Dice, replaced with a d10</p>
+      <p>Overall many rules have been re-written to be more concise and clear. Rules are organized with relevant rules for ease of reading.</p>
+      <p>High Jump has been changed to be more similar to long jump and easier to remember, effectively the same.</p>
+      <p>Exhaustion, 5e PHB had too much overhead replaced with a simpler and easier to remember set of penalties</p>
+      <p>Petrified condition, mostly to be easier to remember while be effectively the same.</p>
+      <p>Swimming rules are simplified to be easier to run at the table.</p>
+      <p>Underwater Combat is now Water Combat, now specifies piercing damage for melee weapons instead of giving a list of melee weapons that deal piercing damage.</p>
+      <p>Updated material spell components to be more in line with how the game is usually played. Cost-free materials are now always a spellcasting focus.</p>
+      <p>Fall Damage has been modified to be easier to run at the table, effectively the same.</p>
+      <p>Versatile weapon property no longer replaces the damage dice, now adds a +2 damage bonus while two-handed.</p>
+      <p>Wearing armor without Armor Proficiency is now more punishing, simply to be easier to adjudicate at the table, players never wear armor they aren't proficient with anyways.</p>
+      <p>Zero cost spellcasting material components are treated as spellcasting focus. Many tables handwave what each component is and 5e could have always been clearer on spellcasting rules if zero cost materials always listed "spellcasting focus".</p>
+    </section>
+    <section class="rule-card">
+      <h2 class="rule-name">Added Rules</h2>
+      <p>Critical success and failure for Saving Throws, this has always made sense to me as a Game Master</p>
+      <p>Movement rule "Hazardous Space" to make it more clear when to call for a skill check.</p>
+      <p>Added "Ambush" rules to give a more immersive option besides Surprise. The rules for Surprise now have clarification on when it should be used.</p>
+      <p>Added clarity for jumping as movement speed expires.</p>
+      <p>Defined a minimum and maximum round time for Game Masters to choose from.</p>
+      <p>Homebrew for attacking while unseen, the attacker has the option to not use Advantage to potentially stay unsee.</p>
+      <p>Homebrewed Dying rules that have less overhead, have a similar risk of death, and give the player more to do.</p>
+      <p>Added a framework for what merchants sell what items to make the item catelogue more organized and comprehensive.</p>
+    </section>
+  </ul>
+  </main>
+</Layout>

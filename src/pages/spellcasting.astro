@@ -1,10 +1,112 @@
-<h1>Spellcasting: UNDER CONSTRUCTION</h1>
-<style>
-  body {
-    color: #eee;
-    background: #222;
-  }
-  h1 {
-    padding: 4rem;
-  }
-</style>
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+<Layout>
+  <main>
+    <h1 class="page-title">Spellcasting</h1>
+    <ul role="list" class="rule-grid">
+      <section class="rule-card">
+        <RuleBlock
+          name="The Fundamentals"
+          description="Different classes have known or prepared spells, as detailed in their class description."
+        />
+        <p>A caster can cast only a limited number of spells for each level before resting. Finishing a long rest restores any expended spell slots.</p>
+        <p>Every spell has a level from 0 to 9. This has no correlation to character levels, a spell's level is its "rank" of potency and how much experience it takes to cast.</p>
+        <p>While wearing armor, casters must have Armor Proficiency for the armor they are wearing to cast a spell. They are otherwise too physically hampered by the armor for spellcasting.</p>
+        <RuleBlock
+          name="Spell Save DC"
+          description="A Spell Save DC is calculated by adding 8 + spellcasting ability modifier + proficiency bonus + any special modifiers."
+        />
+        <RuleBlock
+          name="Cantrips"
+          description="Level 0 spells, these are spells that can be cast at will and do not require any spell slots or being prepared in advance."
+        />
+        <RuleBlock
+          name="Upcasting"
+          description="A caster can cast a spell using a slot that is of a higher level than the spell requires. The spell assumes the higher level for that casting and may have different effects as described in the spell's description."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Spellcasting Components"
+          description="Each spell has components it requires. If a caster can’t provide any of a spell’s components, the spell cannot be cast."
+        />
+        <RuleBlock
+          name="Verbal (V)"
+          description="A verbal component requires the chanting of words with specific pitch and resonance. A caster must be able to speak in order to chant."
+        />
+        <p>A spellcaster performing verbal components has their spellcasting percieved by any sounds they make.</p>
+        <RuleBlock
+          name="Somatic (S)"
+          description="Somatic components require intricate gestures. The caster must have conditional free use of at least one hand to perform these gestures."
+        />
+        <p>A caster performing somatic components can have their spellcasting percieved by line of sight.</p>
+        <RuleBlock
+          name="Material (M)"
+          description="A material component requires a free hand to hold the component."
+        />
+        <p><strong>If no cost is indicated</strong> the caster uses their spellcasting focus for the material component. <strong>If a cost is indicated</strong>, the caster must have that specific component in their hand to cast the spell.</p>
+        <p>If the spell states the <strong>component is consumed by the spell</strong>, the caster must provide another for each casting of the spell.</p>
+        <p>Regardless of the cost of the material component, if there are any somatic components the same hand can be used to hold the material and perform the gestures.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Casting Times"
+          description="Action, Bonus Action, Reaction, or Longer (minutes+)."
+        />
+        <p>Spells with a <strong>bonus action</strong> casting time are an incomplete cast on their own. To finish casting a bonus action spell it needs the use of a cantrip or a non-spellcasting action to be complete.</p>
+        <p>When a spell is cast with a <strong>longer casting time</strong>, the caster must spend their action each turn casting the spell, and maintain concentration. If either requirement is not met no spell slot is used and the caster must start over if they want to cast the spell.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Spell Duration"
+          description="A spell’s duration is the length of time the spell persists. A duration can be expressed in rounds, specific time, concentration, or a specific condition."
+        />
+        <p>A spell with an <strong>instantaneous</strong> duration is unique. The spell can’t be dispelled, because the magic exists only for an instant.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Spell Targeting and Placement"
+          description="Some spells require a specific target, so a caster must have clear visibility of the target to cast the spell. Creatures behind total cover cannot be targeted."
+        />
+        <p>A caster can target themselves unless the spell specifies a hostile creature or another creature.</p>
+        <p>Area of effect spells must be placed at a point that the caster can see. Also if there is an obstruction, the point must be on the near side of it. Lastly, if the caster is within an area of effect, they are also a target of the spell.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Spell Stacking"
+          description="The duration of different spells overlap, while the same effects from different spells don’t combine."
+        />
+        <p>Only the most potent effects from the spells apply while their durations overlap. </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Identifying a Spell"
+          description="When a creature percieves a spell cast, they can attempt to identify it."
+        />
+        <p>The spell must first have been percievable by direct line of sight to its somatic components, and percievable by verbal components used to cast the spell.</p>
+        <p>If both of these conditions were met, a creature with a spellcasting feature can use their reaction to make an Intelligence (Arcana) check. The DC equals 10 + the spell’s level.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Concentration"
+          description="Some spells require focus to maintain their magic. The act of focusing on a spell is known as Concentration."
+        />
+        <p>If Concentration is lost their spellcasting ends. A caster can only maintain one Concentration spell at a time and the caster can end Concentration at any time (no resource required).</p>
+        <p>The following factors always break Concentration: casting another spell that requires Concentration, the caster being incapacitated, or being killed.</p>
+        <p>Whenever the caster takes damage while they are concentrating, they must make a Constitution Saving Throw to maintain. 
+          The DC equals half the damage taken or 10, whichever number is higher. If damage is taken from multiple sources, a saving throw is rolled for each source of damage.</p>
+        <p>The Game Master might also decide that damageless environmental phenomena, such as a wave crashing over the caster, require a DC 10 Constitution saving throw to maintain concentration on a spell.</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Ritual Tagged Spells"
+          description="Spells that can be cast with the normal rules for spellcasting, or can be cast as a ritual."
+        />
+        <p>To cast a spell as a ritual, a spellcaster must have a feature that grants the ability to do so. The caster must also have the spell prepared or known.</p>
+        <p>The ritual version of a spell does not use a spell slot, takes 10 minutes longer to cast, and cannot be cast at a higher level.</p>
+      </section>
+    </ul>
+  </main>
+</layout>
