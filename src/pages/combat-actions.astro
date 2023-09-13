@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import RuleBlock from "../components/RuleBlock.astro";
 ---
+
 <Layout>
   <main>
     <h1 class="page-title">Combat Actions</h1>
@@ -29,7 +30,10 @@ import RuleBlock from "../components/RuleBlock.astro";
           name="Dodge"
           description="Until the start of your next turn, if you can see the attacker, attack rolls made against you have Disadvantage and you make Dexterity Saving Throws with Advantage."
         />
-        <p>You lose this benefit if you are incapacitated or if your speed drops to 0.</p>
+        <p>
+          You lose this benefit if you are incapacitated or if your speed drops
+          to 0.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
@@ -39,9 +43,19 @@ import RuleBlock from "../components/RuleBlock.astro";
       </section>
       <section class="rule-card">
         <RuleBlock
-          name="Help | Aid"
-          description="When you take the Help action, until the start of your next turn, the creature you aid gains advantage on the next ability check or attack roll it makes."
+          name="Help"
+          description="When you take the Help action, you can do one of two things."
         />
+        <p>
+          You can help a non-hostile creature within 5 feet of you complete a
+          task, giving them Advantage on their next ability check until the
+          start of your next turn.
+        </p>
+        <p>
+          You can distract a hostile creature within 5 feet of you, giving the
+          next attack roll Advantage against the hostile creature until the
+          start of your next turn.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
@@ -54,11 +68,23 @@ import RuleBlock from "../components/RuleBlock.astro";
           name="Search"
           description="You devote your attention to finding something."
         />
-        <p>Depending on the nature of your search, the check might be Wisdom or Intelligence as dictated by the Game Master.</p>
-        <p>(Perception) if you are trying to find something through direct visual or audio cues.</p> 
+        <p>
+          Depending on the nature of your search, the check might be Wisdom or
+          Intelligence as dictated by the Game Master.
+        </p>
+        <p>
+          (Perception) if you are trying to find something through direct visual
+          or audio cues.
+        </p>
         <p>(Survival) if you are trying to follow tracks or footprints.</p>
-        <p>(Investigation) if you are trying to make a deduction about anything out of place, whether an object or creature</p>
-        <p>(Religion) if there is anything of religious significance in the confined area.</p>
+        <p>
+          (Investigation) if you are trying to make a deduction about anything
+          out of place, whether an object or creature
+        </p>
+        <p>
+          (Religion) if there is anything of religious significance in the
+          confined area.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
@@ -71,12 +97,25 @@ import RuleBlock from "../components/RuleBlock.astro";
           name="Ready an Action"
           description="Use your current action to perform an action out of turn."
         />
-        <p>Choose a trigger based on a perceivable circumstance and choose a response. The response can be a single interaction, a single attack, a single spell, or movement to make.</p>
-        <p>When the trigger occurs you can choose to use a reaction to perform the readied action or not.</p>
-        <p>To ready a spell it must have a casting time of 1 action. Cast the
+        <p>
+          Choose a trigger based on a perceivable circumstance and choose a
+          response. The response can be a single interaction, a single attack, a
+          single spell, or movement to make.
+        </p>
+        <p>
+          When the trigger occurs you can choose to use a reaction to perform
+          the readied action or not.
+        </p>
+        <p>
+          To ready a spell it must have a casting time of 1 action. Cast the
           spell on your turn and hold onto the spell’s magic and effects with
-          concentration. If it is a leveled spell, you consume the spell slot during your ready action.</p> 
-        <p>If your concentration is broken, the spell dissipates without taking effect.</p>
+          concentration. If it is a leveled spell, you consume the spell slot
+          during your ready action.
+        </p>
+        <p>
+          If your concentration is broken, the spell dissipates without taking
+          effect.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock

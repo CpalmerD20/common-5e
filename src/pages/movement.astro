@@ -2,80 +2,117 @@
 import Layout from "../layouts/Layout.astro";
 import RuleBlock from "../components/RuleBlock.astro";
 ---
+
 <Layout>
   <main>
     <h1 class="page-title">Movement</h1>
-      <ul role="list" class="rule-grid">
-        <section class="rule-card">
-          <RuleBlock
-            name="Movement Basics"
-            description="A creature cannot willingly end their move in another’s space, and using base movement speed for climbing, swimming, or crawling costs 1 additional foot."
-          />
-          <p>(No penalty with the specific speed)</p>
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Difficult Terrain"
-            description="Moving a foot in difficult terrain costs 1 additional foot. Examples are, another creature’s space, rubble, undergrowth, snow, or mud."
-          />
-          <p>For example, climbing on overgrowth, with base speed, would cost 3 feet to move 1 foot</p>
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Hazardous Space"
-            description="Moving in a hazardous space may require a Strength, Constitution, or Dexterity check as determined by the Game Master. Examples of hazards are slippery surfaces, brambled vines, a rapid current, or freezing water."
-          />
-          <p>The DC for moving through or across a hazardous space cannot be less than 10.</p>
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Switching Between Speeds"
-            description="If a creature has multiple speeds it can switch to an applicable speed each time it moves on its turn."
-          />
-          <p>To switch choose an applicable speed to the space the creature occupies, and subtract the distance moved this turn. The remainder is how much more they can move.</p>
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Dropping Prone"
-            description="Creatures can drop prone for no cost. Standing up costs half their max speed. To move while prone a creature must crawl, which costs 1 additional foot to move."
-          />
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Swimming"
-            description="Without a swim speed each foot costs an additional foot of movement. For each hour of swimming without a swim speed, creatures must succeed on a DC 15 Constitution Save or gain a level of exhaustion."
-          />
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Jumping"
-            description="Each foot cleared in a jump costs one foot of movement."
-          />
-          <p><strong>Long Jump</strong>: horizontal distance in feet equal to the creature's Strength score.
-          <p><strong>High Jump</strong>: vertical distance in feet equal to the creature's Strength score divided by 3.</p>
-          <p>If a creature moves at least 10 feet without using an action, they can jump up to their long jump or high jump distance. Otherwise, they can only jump half that distance.</p>
-          <p>When the jump distance exceeds the creature's remaining movement: if a creature is benefiting from the Jump spell, then the creature can still jump that distance. After landing their speed is 0. </p>
-          <p>For all other forms of jumping, the creature can only jump as far as their remaining movement allows.</p>
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Falling"
-            description="Creatures fall at a speed of 500 feet per round."
-          />
-          <p>After falling more than 10 feet and landing on terrain, creatures take bludgeoning damage equal to half the distance fallen.</p>
-          <RuleBlock
-            name="Landing"
-            description="If a creature lands in difficult terrain (DC 10) or hazardous terrain (DC 15), they must succeed on an Acrobatics check to stay on their feet. Otherwise, they fall prone."
-          />
-        </section>
-        <section class="rule-card">
-          <RuleBlock
-            name="Flying"
-            description="Creatures deal with the danger of falling, unless they have the ability to hover or are being held aloft by magic."
-          />
-          <p>Creatures without a flying speed or the aid of specific spells cannot fly.</p>
-          <p>A flying creature will fall if its flying speed is reduced to 0, it is knocked prone, or is otherwise deprived of the ability to move.</p>
-        </section>
-      </ul>
-    </main>
+    <ul role="list" class="rule-grid">
+      <section class="rule-card">
+        <RuleBlock
+          name="Movement Basics"
+          description="A creature cannot willingly end their move in another’s space, and using base movement speed for climbing, swimming, or crawling costs 1 additional foot."
+        />
+        <p>(No penalty with the specific speed)</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Difficult Terrain"
+          description="Moving a foot in difficult terrain costs 1 additional foot. Examples are, another creature’s space, rubble, undergrowth, snow, or mud."
+        />
+        <p>
+          For example, climbing on overgrowth, with base speed, would cost 3
+          feet to move 1 foot
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Hazardous Space"
+          description="Moving in a hazardous space may require a Strength, Constitution, or Dexterity check as determined by the Game Master. Examples of hazards are slippery surfaces, brambled vines, a rapid current, or freezing water."
+        />
+        <p>
+          The DC for moving through or across a hazardous space cannot be less
+          than 10.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Switching Between Speeds"
+          description="If a creature has multiple speeds it can switch to an applicable speed each time it moves on its turn."
+        />
+        <p>
+          To switch choose an applicable speed to the space the creature
+          occupies, and subtract the distance moved this turn. The remainder is
+          how much more they can move.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Dropping Prone"
+          description="Creatures can drop prone for no cost. Standing up costs half their max speed. To move while prone a creature must crawl, which costs 1 additional foot to move."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Swimming"
+          description="Without a swim speed each foot costs an additional foot of movement. For each hour of swimming without a swim speed, creatures must succeed on a DC 15 Constitution Save or gain a level of exhaustion."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Jumping"
+          description="Each foot cleared in a jump costs one foot of movement."
+        />
+        <p>
+          <strong>Long Jump</strong>: horizontal distance in feet equal to the
+          creature's Strength score.
+          <p>
+            <strong>High Jump</strong>: vertical distance in feet equal to the
+            creature's Strength score divided by 3.
+          </p>
+          <p>
+            If a creature moves at least 10 feet without using an action, they
+            can jump up to their long jump or high jump distance. Otherwise,
+            they can only jump half that distance.
+          </p>
+          <p>
+            When the jump distance exceeds the creature's remaining movement: if
+            a creature is benefiting from the Jump spell, then the creature can
+            still jump that distance. After landing their speed is 0.
+          </p>
+          <p>
+            For all other forms of jumping, the creature can only jump as far as
+            their remaining movement allows.
+          </p>
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Falling"
+          description="Creatures fall at a speed of 500 feet per round."
+        />
+        <p>
+          After falling more than 10 feet and landing on terrain, creatures take
+          bludgeoning damage equal to half the distance fallen.
+        </p>
+        <RuleBlock
+          name="Landing"
+          description="If a creature lands in difficult terrain (DC 10) or hazardous terrain (DC 15), they must succeed on an Acrobatics check to stay on their feet. Otherwise, they fall prone."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Flying"
+          description="Creatures deal with the danger of falling, unless they have the ability to hover or are being held aloft by magic."
+        />
+        <p>
+          Creatures without a flying speed or the aid of specific spells cannot
+          fly.
+        </p>
+        <p>
+          A flying creature will fall if its flying speed is reduced to 0, it is
+          knocked prone, or is otherwise deprived of the ability to move.
+        </p>
+      </section>
+    </ul>
+  </main>
 </Layout>

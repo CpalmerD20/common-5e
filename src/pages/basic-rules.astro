@@ -7,124 +7,167 @@ import RuleBlock from "../components/RuleBlock.astro";
   <main>
     <h1 class="page-title">Basic Rules</h1>
     <ul role="list" class="rule-grid">
-    <section class="rule-card">
-      <RuleBlock 
-      name="Dividing Numbers" 
-      description="Whenever you divide a number in the game, always round down if there is a fraction. Even if the fraction is one-half or greater."
-      />
-      
-    </section>
-    <section class="rule-card">
-      <RuleBlock
-      name="Critical Success & Failure"
-      description="Certain d20 rolls can automatically succeed or fail. Those are attack rolls and Saving Throws, which will be described further below."
-      />
-      <p>A critical success is defined as rolling a '20' on the d20.</p>
-      <p>A critical failure is defined as rolling a '1' on the d20.</p>
-      <RuleBlock
-      name="Critical Hits (natural 20)"
-      description="When you get critical success on an attack, roll all damage dice twice and add them together. Afterwards, add relevant modifiers as normal."
-      />
-      <RuleBlock
-      name="Critical Miss (natural 1)"
-      description="When attacking if a character rolls a 1 on the d20, ignore the roll total. A critical miss can never beat any Armor Class."
-      />
-    </section>
-    <section class="rule-card">
-      <RuleBlock
-      name="Saving Throws [Save]"
-      description="A saving throw is an attempt to resist a threat."
-      />
-      <p>A creature is forced to make one when it is at risk from natural hazards or area effects. To make a saving throw, roll a d20 and add the appropriate ability modifier. Each class has proficiency in at least two saving throws.</p>
-      <RuleBlock
-      name="Attack Roll"
-      description="When a character wants to attack a target, they must roll a d20 and add proficiency and relevant modifiers. As long as the roll is not a critical miss, if the roll total equals or exceeds the target's Armor Class the hit is successful and damage must be rolled." {/*TODO*/}
-      />
-      <RuleBlock
-        name="Armor Class [AC]"
-        description="A mixture of a character's natural evasiveness and the protection provided by their armor. If an attack roll is below the target's AC, it either misses or glances off of the armor."
-      />
-      <p>Calculated as 10 + armor bonus + shield bonus. Certain armors allow the character to add their entire dexterity modifier or a portion of it to their Armor Class.</p>
-    </section>
-    <section class="rule-card">
-      <RuleBlock 
-      name="Ability Checks"
-      description="Skills that impact your characters performance to check if your character can accomplish a task."
-      />
-      <p>Strength: Athletics</p>
-      <p>Dexterity: Acrobatics, Sleight of Hand, Stealth</p>
-      <p>Intelligence: Arcana, History, Investigation, Nature, Religion</p>
-      <p>Wisdom: Animal Handling, Insight, Medicine, Perception, Survival</p>
-      <p>Charisma: Deception, Intimidation, Performance, Persuasion</p>
-    </section>
-    <section class="rule-card">
-    <RuleBlock 
-    name="Difficulty Class [DC]"
-    description="A metric representative of how difficult a task is or how dangerous a hazard is. Some difficulty classes are set by a character's stats such as Spell Save DC. Others are provided as a guesstimate from the Game Master."
-    />
-    <p>A DC of 10 would be representative of a task a random, common adult may find challenging.</p>
-    <p>A DC of 15 is representative of a task a proficient adventurer may sometimes struggle with.</p>
-    <p>A DC of 20 is representative of a task a skilled adventurer would usually struggle with.</p>
-    <p>A DC of 25 is for tasks that will always be challenging and may require the aid of fellow adventurers.</p>
-    <RuleBlock 
-    name="Ability Checks"
-    description="When a character attemps to do something that requires skill. The GM decides which ability is relevant to the task and the Difficulty Class of the task."
-    />
-    <p>Roll a d20 + proficiency + modifiers, equalling or exceeding the DC determines success.</p>
-    </section>
-    <section class="rule-card">
-    <RuleBlock
-      name="Advantage and Disadvantage"
-      description="For either ruling, roll two d20s when you make the roll. If you have advantage use the higher of the two rolls, and use the lower roll if you have disadvantage."
-    />
-    <p>If multiple rulings affect a roll you don't roll more than one additional d20.</p>
-    <p>If a roll has at least one advantage and at least one disadvantage, The effects cancel out and one d20 is rolled.</p>
-    </section>
-    <section class="rule-card">
-      <RuleBlock
-        name="Proficiency Bonus"
-        description="A bonus characters have determined by level. While a creature has Proficiency with a specific trait (weapon & spell attack rolls, Spell Save DC, Skill Checks, or Saving Throws) they recieve the bonus relative to their character level."
-      />
-      <p>Level 1 to 4  &rarr; +2</p>
-      <p>Level 5 to 8  &rarr; +3</p>
-      <p>Level 9 to 12 &rarr; +4</p>
-      <p>Level 13 to 16 &rarr; +5</p>
-      <p>Level 17 to 20 &rarr; +6</p>
-      <RuleBlock
-        name="Armor Proficiency"
-        description="Completely different from Proficiency Bonus. Armor Profieciency controls whether a character can wear armor effectively."
-      />
-      <p>If a creature wears armor they do not have Armor Proficiency for they will be too encumbered to focus. As a result the character will have Disadvantage on all d20 rolls they attempt and will not be able to cast spells.</p>
-    </section>
-    <section class="rule-card">
-      <RuleBlock
-        name="Group Check"
-        description="The party members each make the ability check. If at least half the party succeeds, then the whole group succeeds."
-      />
-      <RuleBlock 
-        name="Contests"
-        description="When two creatures’ efforts are directly opposed to another's. The participants in a contest make ability checks appropriate to their efforts. The Game Master chooses the checks and compares the two check totals."
-      />
-      <p>This can occur when both are trying to do the same thing and only one
-        can succeed, or when one of them is trying to prevent the other from accomplishing a goal.</p>
-        <p>The participant with the higher total wins the contest. That creature succeeds or prevents the other one from succeeding.</p>
-        <p>If the result is a tie, the situation remains the same as it was before the contest.</p>
-    </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Dividing Numbers"
+          description="Whenever you divide a number in the game, always round down if there is a fraction. Even if the fraction is one-half or greater."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Critical Success & Failure"
+          description="Certain d20 rolls can automatically succeed or fail. Those are attack rolls and Saving Throws, which will be described further below."
+        />
+        <p>A critical success is defined as rolling a '20' on the d20.</p>
+        <p>A critical failure is defined as rolling a '1' on the d20.</p>
+        <RuleBlock
+          name="Critical Hits (natural 20)"
+          description="When you get critical success on an attack, roll all damage dice twice and add them together. Afterwards, add relevant modifiers as normal."
+        />
+        <RuleBlock
+          name="Critical Miss (natural 1)"
+          description="When attacking if a character rolls a 1 on the d20, ignore the roll total. A critical miss can never beat any Armor Class."
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Saving Throws [Save]"
+          description="A saving throw is an attempt to resist a threat."
+        />
+        <p>
+          A creature is forced to make one when it is at risk from natural
+          hazards or area effects. To make a saving throw, roll a d20 and add
+          the appropriate ability modifier. Each class has proficiency in at
+          least two saving throws.
+        </p>
+        <RuleBlock
+          name="Attack Roll"
+          description="When a character wants to attack a target, they must roll a d20 and add proficiency and relevant modifiers. As long as the roll is not a critical miss, if the roll total equals or exceeds the target's Armor Class the hit is successful and damage must be rolled."
+        />
+        <RuleBlock
+          name="Armor Class [AC]"
+          description="A mixture of a character's natural evasiveness and the protection provided by their armor. If an attack roll is below the target's AC, it either misses or glances off of the armor."
+        />
+        <p>
+          Calculated as 10 + armor bonus + shield bonus. Certain armors allow
+          the character to add their entire dexterity modifier or a portion of
+          it to their Armor Class.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Ability Checks"
+          description="Skills that impact your characters performance to check if your character can accomplish a task."
+        />
+        <p>Strength: Athletics</p>
+        <p>Dexterity: Acrobatics, Sleight of Hand, Stealth</p>
+        <p>Intelligence: Arcana, History, Investigation, Nature, Religion</p>
+        <p>Wisdom: Animal Handling, Insight, Medicine, Perception, Survival</p>
+        <p>Charisma: Deception, Intimidation, Performance, Persuasion</p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Difficulty Class [DC]"
+          description="A metric representative of how difficult a task is or how dangerous a hazard is. Some difficulty classes are set by a character's stats such as Spell Save DC. Others are provided as a guesstimate from the Game Master."
+        />
+        <p>
+          A DC of 10 would be representative of a task a random, common adult
+          may find challenging.
+        </p>
+        <p>
+          A DC of 15 is representative of a task a proficient adventurer may
+          sometimes struggle with.
+        </p>
+        <p>
+          A DC of 20 is representative of a task a skilled adventurer would
+          usually struggle with.
+        </p>
+        <p>
+          A DC of 25 is for tasks that will always be challenging and may
+          require the aid of fellow adventurers.
+        </p>
+        <RuleBlock
+          name="Ability Checks"
+          description="When a character attemps to do something that requires skill. The GM decides which ability is relevant to the task and the Difficulty Class of the task."
+        />
+        <p>
+          Roll a d20 + proficiency + modifiers, equalling or exceeding the DC
+          determines success.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Advantage and Disadvantage"
+          description="For either ruling, roll two d20s when you make the roll. If you have advantage use the higher of the two rolls, and use the lower roll if you have disadvantage."
+        />
+        <p>
+          If multiple rulings affect a roll you don't roll more than one
+          additional d20.
+        </p>
+        <p>
+          If a roll has at least one advantage and at least one disadvantage,
+          The effects cancel out and one d20 is rolled.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Proficiency Bonus"
+          description="A bonus characters have determined by level. While a creature has Proficiency with a specific trait (weapon & spell attack rolls, Spell Save DC, Skill Checks, or Saving Throws) they recieve the bonus relative to their character level."
+        />
+        <p>Level 1 to 4 &rarr; +2</p>
+        <p>Level 5 to 8 &rarr; +3</p>
+        <p>Level 9 to 12 &rarr; +4</p>
+        <p>Level 13 to 16 &rarr; +5</p>
+        <p>Level 17 to 20 &rarr; +6</p>
+        <RuleBlock
+          name="Armor Proficiency"
+          description="Completely different from Proficiency Bonus. Armor Profieciency controls whether a character can wear armor effectively."
+        />
+        <p>
+          If a creature wears armor they do not have Armor Proficiency for they
+          will be too encumbered to focus. As a result the character will have
+          Disadvantage on all d20 rolls they attempt and will not be able to
+          cast spells.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Group Check"
+          description="The party members each make the ability check. If at least half the party succeeds, then the whole group succeeds."
+        />
+        <RuleBlock
+          name="Contests"
+          description="When two creatures’ efforts are directly opposed to another's. The participants in a contest make ability checks appropriate to their efforts. The Game Master chooses the checks and compares the two check totals."
+        />
+        <p>
+          This can occur when both are trying to do the same thing and only one
+          can succeed, or when one of them is trying to prevent the other from
+          accomplishing a goal.
+        </p>
+        <p>
+          The participant with the higher total wins the contest. That creature
+          succeeds or prevents the other one from succeeding.
+        </p>
+        <p>
+          If the result is a tie, the situation remains the same as it was
+          before the contest.
+        </p>
+      </section>
 
-    <section class="rule-card">
-      <RuleBlock
-      name="Resting"
-      description="To gain the benefits of a rest, a character must have at least 1 hit point at the start. If a rest is interrupted by strenuous activity (fighting, casting leveled spells, or adventuring activities) the characters must begin the rest again to get any benefit from it."
-      />
-      <RuleBlock
-      name="Short Rest"
-      description="A short rest is at least 1 hour long, during which a character does nothing other than eating, drinking, reading, or tending to wounds."
-      />
-      <RuleBlock
-      name="Long Rest"
-      description="A long rest is at least 8 hours long, during which a creature sleeps for 6 hours. At the end of a long rest, a character regains all hit points, spell slots, and all Hit Dice. A creature can't benefit from more than one long rest in a 24-hour period."
-      />
-    </section>
-  </ul>
-</main>
+      <section class="rule-card">
+        <RuleBlock
+          name="Resting"
+          description="To gain the benefits of a rest, a character must have at least 1 hit point at the start. If a rest is interrupted by strenuous activity (fighting, casting leveled spells, or adventuring activities) the characters must begin the rest again to get any benefit from it."
+        />
+        <RuleBlock
+          name="Short Rest"
+          description="A short rest is at least 1 hour long, during which a character does nothing other than eating, drinking, reading, or tending to wounds."
+        />
+        <RuleBlock
+          name="Long Rest"
+          description="A long rest is at least 8 hours long, during which a creature sleeps for 6 hours. At the end of a long rest, a character regains all hit points, spell slots, and all Hit Dice. A creature can't benefit from more than one long rest in a 24-hour period."
+        />
+      </section>
+    </ul>
+  </main>
 </Layout>
