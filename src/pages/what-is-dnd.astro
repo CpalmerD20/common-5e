@@ -1,0 +1,108 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+//TODO add header, nav, and more content
+---
+
+<Layout>
+  <main>
+    <h1 class="page-title">What is D&D?</h1>
+    <ul class="rule-grid">
+      <section class="rule-card">
+        <RuleBlock
+          name="Tabletop RPG Games"
+          description="Games where friends gather together to play through a collaborative story and roll some dice."
+        />
+        <p>
+          One player acts as the rule manager and story teller, usually referred
+          to as the Game Master. The Game Master will describe the environment,
+          pilot enemies in combat, and describe the outcomes for everything the
+          players attempt to do.
+        </p>
+        <p>
+          The other players create characters to go on an adventure with and
+          form the adventuring party.
+        </p>
+        <p>
+          The adventuring party will tell the Game Master what they are aspiring
+          to do. the Game Master will use what rules and dice apply to determine
+          the outcome or make a decision on their own. Either way the Game
+          Master will describe the outcomes of the Adventuring Party's actions.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Game Dice"
+          description="Several dice with differing numbers of sides are needed to play this game."
+        />
+        <p>
+          The dice are usually notated with shorthand. The word "dice" is
+          shortened to "d" or "D" and followed by a number specifying the number
+          of sides on the dice. For example, a six-sided die can be referred to
+          as a "d6". If three six-sided dice are needed, the total dice is
+          abbreviated at the start of the shorthand. Which would be "3d6" or
+          "3D6".
+        </p>
+        <RuleBlock name="A Standard Dice Set" description="" />
+        <p>
+          [ d4, d6, d8, d10, d12, d20 ] are the dice used to play this game. The
+          d20 is the most frequently used dice. Dice sets are available in game
+          stores and online.
+        </p>
+        <p>
+          Some dice can be a substitute for others. A d20 can function as a d10
+          if the roll value is divided by two, likewise a d12 can represent a d6
+          and a d8 can represent a d4.
+        </p>
+        <RuleBlock name="Distance" />
+        <p>
+          Distance in this game is defined in abstract units of 5 feet. The Game
+          Master is free to choose how this is represented in abstract. Either
+          with verbal approximations, a grid with each unit being a 5 foot
+          space, or simple lines measured between characters and objects, at a
+          scale agreed upon by the players.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Visualizing the Game"
+          description="There are many ways to represent the game, which are not limited to the options below."
+        />
+        <p>
+          During sessions, the Game Master usually chooses which option is used,
+          or even uses a mixture of all. It is recommended to at least use pen
+          and paper or any digital form of documentation.
+        </p>
+        <RuleBlock
+          name="Theatre of the Mind"
+          description="The Game Master and players all describe the game through words and use pen and paper simply for calculations and documentation."
+        />
+        <p>
+          This has the benefit of keeping each game session quick to set up and
+          clean. Theatre of the Mind, also makes it simpler to handle social
+          events and traveling through a town.
+        </p>
+        <RuleBlock
+          name="Battlemaps and Miniatures"
+          description="Drawn exploration areas are laid on a table and miniatures of the characters and objects are moved atop the map. Opaque pieces of paper are used to represent darkness or what has yet to be seen."
+        />
+        <p>
+          The battle map and minis have the benefit of allowing the adventuring
+          party to make combat decisions at a glance. And, drawing battlemaps
+          and painting minis can be a source of fun on their own.
+        </p>
+        <RuleBlock
+          name="Virtual Table Tops"
+          description="A table top available as a desktop or browser application."
+        />
+        <p>
+          The main strength of Virtual Table Tops is enabling remote games
+          between players. They have the tradeoff that setting up the session
+          can be more work than other methods, while running the session can be
+          less effort. They vary greatly in the type of graphics they provide
+          and how easy to use they are.
+        </p>
+      </section>
+    </ul>
+  </main>
+</Layout>

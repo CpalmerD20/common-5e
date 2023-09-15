@@ -1,10 +1,67 @@
-<h1>Death and Dying: UNDER CONSTRUCTION</h1>
-<style>
-  body {
-    color: #eee;
-    background: #222;
-  }
-  h1 {
-    padding: 4rem;
-  }
-</style>
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+
+<Layout>
+  <main>
+    <h1 class="page-title">Death and Dying</h1>
+    <ul class="rule-grid">
+      <section class="rule-card">
+        <RuleBlock
+          name="Death Saving Throws"
+          description="Whenever you start your turn with 0 hit points you must make a DC 10 death saving throw, to determine whether your character creeps closer to death or hangs onto life. "
+        />
+        <p>
+          You are in the hands of fate and no ability score can apply to the
+          roll. You can be aided only by spells and features that improve your
+          chances of succeeding on a saving throw.
+        </p>
+        <RuleBlock
+          name="Three of a Kind"
+          description="Each time you roll 10 or higher it's a success, otherwise it's a failure. Keep track of each success and failure until you collect three of a kind."
+        />
+        <p>
+          Three successes and your character becomes stable (see below). With
+          three failures your character dies.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Rolling a 1 or 20"
+          description="When you make a death saving throw and roll a critical failure, it counts as two failures. If you roll a critical success, your character immediately gains 1 Hit Point."
+        />
+        <RuleBlock
+          name="Damage at 0 Hit Points"
+          description="If you take any damage while you have 0 Hit Points, you add another death saving throw failure."
+        />
+        <p>
+          If the damage exceeds your Hit Point maximum, the character
+          immediately dies.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Stabilizing a Dying Character"
+          description="A character can attempt to make a dying creature stable by using their action to apply first aid."
+        />
+        <p>
+          The character must make a DC 10 Wisdom (Medecine) check. On success
+          the creature becomes stable. A stable creature remains unconscious and
+          still has 0 Hit Points. A stable creature will gain 1 Hit Point after
+          two hours.
+        </p>
+        <p>
+          If the stable creature takes any damage it stops being stable and goes
+          back to making death saving throws.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="NPCs and Death"
+          description="Non-player characters such as villains usually die instantly as their Hit Points reach 0. However a Game Master is free to have death saving throws apply to story critical NPCs or villains."
+        />
+      </section>
+    </ul>
+  </main>
+</Layout>

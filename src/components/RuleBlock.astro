@@ -1,12 +1,25 @@
 ---
 const { name, description } = Astro.props;
 ---
+
 <div class="rule-block">
-  <h3 class="rule-name">{name}</h3>
+  <h2 class="rule-name">{name}</h2>
   <p class="rule-description">{description}</p>
 </div>
 <style>
   * {
     list-style: none;
+  }
+  div {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+  p:empty {
+    display: none;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    margin-top: 1rem;
   }
 </style>

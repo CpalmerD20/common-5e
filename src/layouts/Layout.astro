@@ -1,5 +1,5 @@
 ---
-
+import navImage from "../src/d20.png";
 ---
 
 <!doctype html>
@@ -10,15 +10,56 @@
 		<meta name="description" content="Astro description" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Creative Commons 5e</title>
+		<title>Common 5e</title>
 	</head>
 	<body>
+		<nav>
+			<input id="nav-toggle" type="checkbox" />
+			<label for="nav-toggle">
+				<img
+					src="/d20.png"
+					alt="click to toggle the navigation menu"
+					id="nav-toggle-button"
+				/>
+			</label>
+			<label class="logo">D&D5e</label>
+			<ul class="nav-list">
+				<li><a class="nav-link" href="/">Home</a></li>
+				<li><a class="nav-link" href="/about/">About</a></li>
+				<li><a class="nav-link" href="/change-log/">Change Log</a></li>
+				<li><a class="nav-link" href="/what-is-dnd/">What is D&D?</a></li>
+				<li><a class="nav-link" href="/basic-rules/">Basic Rules</a></li>
+				<li><a class="nav-link" href="/conditions/">Conditions</a></li>
+				<li><a class="nav-link" href="/vision-light/">Vision & Light</a></li>
+				<li><a class="nav-link" href="/adventuring/">Adventuring</a></li>
+				<li><a class="nav-link" href="/combat-encounters/">Encounters</a></li>
+				<li><a class="nav-link" href="/combat-actions/">Combat Actions</a></li>
+				<li><a class="nav-link" href="/movement/">Movement</a></li>
+				<li><a class="nav-link" href="/space/">Space</a></li>
+				<li>
+					<a class="nav-link" href="/damage-healing/">Damage & Healing</a>
+				</li>
+				<li><a class="nav-link" href="/dying-death/">Dying & Death</a></li>
+				<li><a class="nav-link" href="/spellcasting/">Spellcasting</a></li>
+				<li>
+					<a class="nav-link" href="/weapon-attack-properties/"
+						>Weapon Properties</a
+					>
+				</li>
+				<li>
+					<a class="nav-link" href="/merchants-items/">Merchant Inventory</a>
+				</li>
+				<!-- <li><a href="#"></a></li> -->
+			</ul>
+		</nav>
+		<div class="spacer"></div>
 		<slot />
 	</body>
 </html>
 <style is:global>
 	* {
 		padding: 0;
+		margin: 0;
 		list-style: none;
 	}
 	:root {
@@ -28,7 +69,7 @@
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
-			rgb(var(--accent-light)) 40%,
+			rgb(var(--accent-light)) 40%
 		);
 	}
 	html {
@@ -37,45 +78,133 @@
 		background-size: 224px;
 		color: #eee;
 	}
+	.spacer {
+		height: 5rem;
+	}
+	nav {
+		position: fixed;
+		width: 100%;
+		min-width: 12rem;
+		background: rgb(var(--accent-dark));
+		padding: 1rem;
+	}
+	.nav-list {
+		background: rgb(var(--accent-dark));
+		z-index: 2;
+		position: fixed;
+		margin: 1rem -1rem;
+		width: 100%;
+		display: none;
+		grid-template-columns: 50% 50%;
+	}
+	#nav-toggle:checked ~ .nav-list {
+		display: grid;
+	}
+	.nav-link {
+		text-align: center;
+		display: inline-block;
+		font-weight: bold;
+		border-radius: 4px;
+		font-size: 1.4rem;
+		padding: 1rem;
+		width: calc(100% - 2rem);
+		color: rgb(var(--accent-light));
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: 0.3s ease-out;
+	}
+	.nav-link:is(:hover, :focus-within) {
+		background: rgb(var(--accent-light));
+		transition: 0.3s ease-in;
+		color: #212;
+	}
+	#nav-toggle {
+		display: none;
+	}
+	#nav-toggle-button {
+		object-fit: contain;
+		width: 3rem;
+		margin-right: 2rem;
+		filter: brightness(0) invert(1);
+		float: right;
+	}
+	.logo {
+		display: block;
+		font-size: 2rem;
+		line-height: 1rem;
+		padding: 1rem;
+		font-weight: bold;
+	}
 	.page-title {
-    padding: 1rem;
-    color: rgb(var(--accent-light));
+		padding: 1rem;
+		color: rgb(var(--accent-light));
 		text-align: center;
 		margin: 0;
-  }
+	}
 	.rule-name {
-    color: #ccc;
-  }
-  .rule-grid {
-			display: grid;
-			gap: 1rem;
-			margin: 0;
+		color: #ccc;
+	}
+	.rule-grid {
+		display: grid;
+		gap: 1rem;
+		margin: 0;
 	}
 	.rule-card {
-    margin: auto;
+		margin: auto;
 		list-style: none;
-    width: calc(100% - 2rem);
-    max-width: 28rem;
+		width: calc(100% - 2rem);
+		max-width: 30rem;
 		border-radius: 7px;
-    padding: 0rem 0.8rem;
+		padding: 0rem 0.8rem;
 		background: #23262d;
-    background-image: none;
-    background-size: 400%;
+		background-image: none;
+		background-size: 400%;
 		background-position: 100%;
-    transition: 0.5s ease-out;
+		transition: 0.5s ease-out;
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 	}
-  .rule-card:is(:hover, :focus-within) {
+	.rule-card:is(:hover, :focus-within) {
 		background: rgb(var(--accent-light));
-    transition: 0.5s ease-in;
+		transition: 0.5s ease-in;
 	}
 	.rule-card:is(:hover, :focus-within) .rule-name {
-    color: rgba(var(--accent-dark), 100%);
+		color: rgba(var(--accent-dark), 100%);
 	}
 	.rule-card:is(:hover, :focus-within) p {
-    color: #212;
+		color: #212;
 	}
-	ul {
-		margin-bottom: 0.8rem;
+	p {
+		padding: 0.5rem;
+		margin: 0.5rem;
+	}
+	@media screen and (min-width: 800px) {
+		#nav-toggle-button {
+			display: none;
+		}
+		body {
+			display: flex;
+		}
+		nav {
+			position: relative;
+			width: 12rem;
+			margin-right: 1rem;
+		}
+		.logo {
+			position: fixed;
+		}
+		.nav-list {
+			display: grid;
+			position: fixed;
+			margin: auto;
+			top: 4.5rem;
+			width: 12rem;
+			grid-template-columns: 1fr;
+		}
+		.nav-link {
+			text-align: left;
+			font-size: 0.8rem;
+			padding: 0.8rem 1rem;
+			width: calc(100% - 2rem);
+		}
 	}
 </style>

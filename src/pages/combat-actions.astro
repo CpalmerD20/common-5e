@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import RuleBlock from "../components/RuleBlock.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout>
@@ -117,12 +118,27 @@ import RuleBlock from "../components/RuleBlock.astro";
           effect.
         </p>
       </section>
-      <section class="rule-card">
-        <RuleBlock
-          name="Cast a Spell"
-          description="Visit the Spellcasting page."
+      <!-- <section class="rule-card">
+        <RuleBlock name="Cast a Spell" />
+        <p>Visit the <a href="/spellcasting/">Spellcasting</a> page.</p>
+      </section> -->
+      <div>
+        <Card
+          href="/spellcasting/"
+          title="Cast a Spell"
+          body="Visit the Spellcasting page."
         />
-      </section>
+      </div>
     </ul>
   </main>
 </Layout>
+<style>
+  a {
+    color: inherit;
+  }
+  div {
+    margin: auto;
+    width: 100%;
+    max-width: 31.8rem;
+  }
+</style>
