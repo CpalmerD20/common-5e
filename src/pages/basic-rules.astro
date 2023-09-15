@@ -42,16 +42,21 @@ import RuleBlock from "../components/RuleBlock.astro";
         </p>
         <RuleBlock
           name="Attack Roll"
-          description="When a character wants to attack a target, they must roll a d20 and add proficiency and relevant modifiers. As long as the roll is not a critical miss, if the roll total equals or exceeds the target's Armor Class the hit is successful and damage must be rolled."
+          description="When a character wants to attack a target, they must roll a d20 and add proficiency and relevant modifiers."
         />
+        <p>
+          As long as the roll is not a critical miss and the roll total equals
+          or exceeds the target's Armor Class, the hit is successful and damage
+          must be rolled.
+        </p>
         <RuleBlock
           name="Armor Class [AC]"
           description="A mixture of a character's natural evasiveness and the protection provided by their armor. If an attack roll is below the target's AC, it either misses or glances off of the armor."
         />
         <p>
-          Calculated as 10 + armor bonus + shield bonus. Certain armors allow
-          the character to add their entire dexterity modifier or a portion of
-          it to their Armor Class.
+          AC is calculated with 10 + armor bonus + shield bonus. Certain armors
+          allow the character to add their entire dexterity modifier or a
+          portion of it to their Armor Class.
         </p>
       </section>
       <section class="rule-card">
@@ -60,7 +65,7 @@ import RuleBlock from "../components/RuleBlock.astro";
           description="When a character attempts to do something that requires skill. The GM decides which ability is relevant to the task and the Difficulty Class of the task."
         />
         <p>
-          Roll a d20 + proficiency + modifiers, equalling or exceeding the DC
+          Roll a d20 + proficiency + modifiers: equalling or exceeding the DC
           determines success.
         </p>
         <RuleBlock
@@ -98,21 +103,25 @@ import RuleBlock from "../components/RuleBlock.astro";
       <section class="rule-card">
         <RuleBlock
           name="Advantage and Disadvantage"
-          description="For either ruling, roll two d20s when you make the roll. If you have advantage use the higher of the two rolls, and use the lower roll if you have disadvantage."
+          description="For both rulings, roll two d20s when you perform the roll."
         />
         <p>
-          If multiple rulings affect a roll you don't roll more than one
+          If you have advantage use the higher value of the two d20s, and use
+          the lower value if you have disadvantage.
+        </p>
+        <p>
+          If multiple rulings affect a roll, you don't roll more than one
           additional d20.
         </p>
         <p>
-          If a roll has at least one advantage and at least one disadvantage,
-          The effects cancel out and one d20 is rolled.
+          If a roll has at least one advantage and at least one disadvantage the
+          effects cancel out, and only one d20 is used.
         </p>
       </section>
       <section class="rule-card">
         <RuleBlock
           name="Proficiency Bonus"
-          description="A bonus characters have determined by level. While a creature has Proficiency with a specific trait (weapon & spell attack rolls, Spell Save DC, Skill Checks, or Saving Throws) they recieve the bonus relative to their character level."
+          description="A bonus determined by the character's level. When a creature has Proficiency with a specific trait (weapon & spell attack rolls, Spell Save DC, Skill Checks, or Saving Throws), they receive the bonus relative to their character level."
         />
         <p>Level 1 to 4 &rarr; +2</p>
         <p>Level 5 to 8 &rarr; +3</p>
@@ -121,13 +130,13 @@ import RuleBlock from "../components/RuleBlock.astro";
         <p>Level 17 to 20 &rarr; +6</p>
         <RuleBlock
           name="Armor Proficiency"
-          description="Completely different from Proficiency Bonus. Armor Profieciency controls whether a character can wear armor effectively."
+          description="Armor Profieciency controls whether a character can wear armor effectively. Note that proficiency bonus is different from Armor Proficiency and neither will affect the other."
         />
         <p>
-          If a creature wears armor they do not have Armor Proficiency for they
-          will be too encumbered to focus. As a result the character will have
-          Disadvantage on all d20 rolls they attempt and will not be able to
-          cast spells.
+          If a creature wears armor in which they do not have Armor Proficiency,
+          they will be too encumbered to focus. As a result the character will
+          have Disadvantage on all d20 rolls they attempt and will not be able
+          to cast spells.
         </p>
       </section>
       <section class="rule-card">
@@ -137,7 +146,7 @@ import RuleBlock from "../components/RuleBlock.astro";
         />
         <RuleBlock
           name="Contests"
-          description="When two creatures’ efforts are directly opposed to another's. The participants in a contest make ability checks appropriate to their efforts. The Game Master chooses the checks and compares the two check totals."
+          description="When a creature's effort is directly opposed by another's efforts. The participants in a contest make ability checks appropriate to their efforts. The Game Master chooses the checks and compares the two check totals."
         />
         <p>
           This can occur when both are trying to do the same thing and only one
@@ -157,11 +166,11 @@ import RuleBlock from "../components/RuleBlock.astro";
       <section class="rule-card">
         <RuleBlock
           name="Resting"
-          description="To gain the benefits of a rest, a character must have at least 1 hit point at the start. If a rest is interrupted by strenuous activity (fighting, casting leveled spells, or adventuring activities) the characters must begin the rest again to get any benefit from it."
+          description="To gain the benefits of resting, a character must have at least 1 hit point at the start. If a long rest, or long rest, is interrupted by strenuous activity (fighting, casting leveled spells, or adventuring activities), the characters must begin the rest again to get any benefit from it."
         />
         <RuleBlock
           name="Short Rest"
-          description="A short rest is at least 1 hour long, during which a character does nothing other than eating, drinking, reading, or tending to wounds."
+          description="A short rest is at least 1 hour long, during which a character does nothing other than: eating, drinking, reading, or tending to wounds."
         />
         <RuleBlock
           name="Long Rest"
