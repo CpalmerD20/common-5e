@@ -1,10 +1,62 @@
-<h1>Merchant Items: UNDER CONSTRUCTION</h1>
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout>
+  <main>
+    <h1 class="page-title">Merchant Items: Under Construction</h1>
+    <ul role="list" class="rule-grid">
+      <Card
+        href="#"
+        title="Apothecary or Alchemist"
+        body="Vendors of potions and alchemy, there is always at least one in a village or town. They sell potions, antitoxin, acid, alchemist's fire, healer's kits, herbalism kits, and oil."
+      />
+      <Card
+        href="#"
+        title="General Outfitter"
+        body="Vendors who sell items for outdoor exploration and travel. They sell items that aid travelers in diverse environments, rations, water, and items for travel entertainment."
+      />
+      <Card
+        href="#"
+        title="Armoror"
+        body="A trader specialized in the craft of making armor, usually involving leatherwork, metalwork, or smithing. They are easily found in established cities with a militia, townsguard, or army."
+      />
+      <Card
+        href="#"
+        title="Weapon Smith"
+        body="A smith who is consistently constracted to provide weapons (whether by a government, mercenary group, or other organization) and has many available to purchase."
+      />
+      <Card
+        href="#"
+        title="Cleric or Priest"
+        body="Holy workers who can be found in religious buildings within villages or cities. They can procure Holy Water and provide healing spellcasting services for those that can afford it."
+      />
+      <Card
+        href="#"
+        title="Wizard"
+        body="Wizards who don't work in teaching, research, or higher education usually set up shops to provide income. Crafting new spellbooks, writing spellscrolls, and providing some spellcasting services for a reasonable fee."
+      />
+      <Card
+        href="#"
+        title="Back Alley Rogue or the Thieves Guild"
+        body="Vendors who usually do not want to be found, society does not acknowledge their existence, but individuals who can interpret the code of 'Thieves Cant' are easily able to find such vendors."
+      />
+      <Card
+        href="#"
+        title="Stable Master"
+        body="Vendors who provide beasts of burden and feed to care for the animals they sell. They have a varying inventory depending on the environment of the city and region of the world."
+      />
+      <Card href="#" title="Coach Maker" body="" />
+    </ul>
+  </main>
+</Layout>
+
 <style>
-  body {
-    color: #eee;
-    background: #222;
-  }
-  h1 {
-    padding: 4rem;
+  .rule-grid {
+    margin: auto;
+    width: 32rem;
+    display: grid;
   }
 </style>

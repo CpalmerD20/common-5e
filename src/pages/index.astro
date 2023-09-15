@@ -5,15 +5,20 @@ import Card from "../components/Card.astro";
 
 <Layout>
 	<main>
-		<h1>Creative Commons <span class="text">D&D 5e</span></h1>
+		<h1>Common <span class="text">D&D 5e</span></h1>
 		<p class="instructions">
 			This a website to help run a physical or virtual tabletop session of D&D
 			5e.
-			<br /><br />Read the <a href="#">about</a> and <a href="/change-log/"
+			<br /><br />Read the <a href="#">about</a> or <a href="/change-log/"
 				>change log</a
 			>
 		</p>
 		<ul role="list" class="link-card-grid">
+			<Card
+				href="/what-is-dnd/"
+				title="What is D&D?"
+				body="A brief overview of the game."
+			/>
 			<Card
 				href="/basic-rules/"
 				title="Basic Rules"
@@ -88,7 +93,7 @@ import Card from "../components/Card.astro";
 			padding: 1rem;
 			width: 800px;
 			max-width: calc(100% - 2rem);
-			color: white;
+			/* color: white; */
 		}
 		h1 {
 			font-size: 3rem;
@@ -116,6 +121,9 @@ import Card from "../components/Card.astro";
 			grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 			gap: 1rem;
 			padding: 0;
+		}
+		a {
+			color: white;
 		}
 	</style>
 </Layout>
