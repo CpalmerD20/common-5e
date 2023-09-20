@@ -65,25 +65,29 @@ import RuleBlock from "../components/RuleBlock.astro";
         <p>
           <strong>Long Jump</strong>: horizontal distance in feet equal to the
           creature's Strength score.
-          <p>
-            <strong>High Jump</strong>: vertical distance in feet equal to the
-            creature's Strength score divided by 3.
-          </p>
-          <p>
-            If a creature moves at least 10 feet without using an action, they
-            can jump up to their long jump or high jump distance. Otherwise,
-            they can only jump half that distance.
-          </p>
-          <p>
-            When the jump distance exceeds the creature's remaining movement: if
-            a creature is benefiting from the Jump spell, then the creature can
-            still jump that distance. After landing their speed is 0.
-          </p>
-          <p>
-            For all other forms of jumping, the creature can only jump as far as
-            their remaining movement allows.
-          </p>
         </p>
+        <p>
+          <strong>High Jump</strong>: vertical distance in feet equal to the
+          creature's Strength score divided by 3.
+        </p>
+        <p>
+          If a creature moves at least 10 feet without using an action, they can
+          jump up to their long jump or high jump distance. Otherwise, they can
+          only jump half that distance.
+        </p>
+        <p>
+          When the jump distance exceeds the creature's remaining movement: if a
+          creature is benefiting from the Jump spell, then the creature can
+          still jump that distance. After landing their speed is 0.
+        </p>
+        <p>
+          For all other forms of jumping, the creature can only jump as far as
+          their remaining movement allows.
+        </p>
+        <RuleBlock
+          name="Landing on Terrain"
+          description="If a jumping creature lands in difficult terrain (DC 10) or hazardous terrain (DC 15), they must succeed on an Acrobatics check to stay on their feet. Otherwise, they fall prone."
+        />
       </section>
       <section class="rule-card">
         <RuleBlock
@@ -91,13 +95,28 @@ import RuleBlock from "../components/RuleBlock.astro";
           description="Creatures fall at a speed of 500 feet per round."
         />
         <p>
-          After falling more than 10 feet and landing on terrain, creatures take
-          bludgeoning damage equal to half the distance fallen.
+          After falling more than 10 feet and landing on a surface, creatures
+          take bludgeoning damage equal to half the distance fallen.
+        </p>
+        <p>
+          After recieving one (or more) bludgeoning damage from falling
+          creatures must make an Acrobatics check to stay on their feet, or fall
+          prone. The DC is equal to the distance fallen.
         </p>
         <RuleBlock
-          name="Landing"
-          description="If a creature lands in difficult terrain (DC 10) or hazardous terrain (DC 15), they must succeed on an Acrobatics check to stay on their feet. Otherwise, they fall prone."
+          name="Landing in Water"
+          description="If a creature falling into water does not have a reaction they are assumed to fall flat against the surface of the water and take the full damage of the fall."
         />
+        <p>
+          Otherwise, they can use their reaction to rotate into a safe diving
+          position. When a creature dives into water, reduce the distance fallen
+          by twice the depth of the body of water.
+        </p>
+        <p>
+          For example if a creature dives 70 feet into a 20 foot deep body of
+          water, calculate as (70 - (2 * 20)) and use 30 feet when calculating
+          fall damage.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
