@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import RuleBlock from "../components/RuleBlock.astro";
+---
+
+<Layout>
+  <main>
+    <h1 class="page-title">Dying and Death</h1>
+    <ul class="rule-grid">
+      <section class="rule-card">
+        <RuleBlock name="The Dying State" description="" />
+        <p>
+          At the end of any turn, if damage taken exceeds 50 plus your Max HP
+          then your character is dead. Otherwise if the character is at 0 HP,
+          they are in the <strong>dying state</strong>.
+        </p>
+        <p>
+          The character falls prone, can only crawl for movement, and can only
+          use its action to help. The character cannot stand up, concentrate, or
+          perform reactions.
+        </p>
+        <p>
+          If all player characters fall into the dying state, the Game Master
+          can declare a total party kill.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Death Saving Throws"
+          description="Whenever you start your turn with 0 hit points, you must make a DC 10 death saving throw before doing anything else."
+        />
+        <p>
+          If you fail any death saving throw while your character is conscious,
+          then your character will fall unconscious.
+          <p>
+            No modifiers apply to death saving throws, but you can be aided by
+            spells and features that improve your chances of succeeding on a
+            saving throw.
+          </p>
+        </p>
+        <RuleBlock
+          name="Unconscious and Dying"
+          description="Whenever you start your turn with your character unconscious and in the dying state: if you fail the death saving throw your character dies, and if you succeed on the death saving throw your character gets another turn. "
+        />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Stabilizing a Dying Character"
+          description="A character can attempt to make a dying creature stable by using their action to apply first aid. The character must make a DC 10 Wisdom (Medecine) check. On success the creature becomes stable."
+        />
+        <p>
+          A stable creature still has 0 Hit Points but no longer has to make
+          death saving throws. If the stable creature takes any damage it stops
+          being stable and goes back to making death saving throws.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="NPCs and Death"
+          description="Non-player characters such as villains usually die instantly as their Hit Points reach 0. However a Game Master is free to have death saving throws apply to story critical NPCs or villains."
+        />
+      </section>
+    </ul>
+  </main>
+</Layout>
