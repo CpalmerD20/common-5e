@@ -9,6 +9,22 @@ import RuleBlock from "../components/RuleBlock.astro";
     <ul role="list" class="rule-grid">
       <section class="rule-card">
         <RuleBlock
+          name="Exploration Order"
+          description="While the Adventuring Party is on foot or on mounts, an exploration order makes it easier to determine numerous outcomes."
+        />
+        <p>
+          For example which characters are affected by area effects, which
+          characters can spot hidden enemies, and which characters are closest
+          to enemies. The Adventuring Party chooses their order from front to
+          back.
+        </p>
+        <p>
+          Also, order can be shared if there is enough space for characters to
+          move side by side.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
           name="Draw a Map"
           description="Any player at the table can draw a map that records the group’s progress and help the characters get back on course if they get lost. No ability check is required."
         />
@@ -28,6 +44,16 @@ import RuleBlock from "../components/RuleBlock.astro";
           name="Track"
           description="A character can follow the tracks of another creature, making a Wisdom (Survival) check when the Game Master calls for it."
         />
+      </section>
+      <section class="rule-card">
+        <RuleBlock
+          name="Hide"
+          description="Make a Dexterity (Stealth) check in an attempt to become hidden."
+        />
+        <p>
+          The roll total becomes your stealth DC and nearby creatures compare
+          their perception checks or passive perception.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
@@ -72,7 +98,7 @@ import RuleBlock from "../components/RuleBlock.astro";
           Persuasion).
         </p>
         <p>
-          The default DC is the greater value between [15] or the NPC’s
+          The default DC is the greater value between (15) or the NPC’s
           Intelligence score. Advantage or Disadvantage may be applied based on
           the NPC’s disposition or attitude with the characters.
         </p>

@@ -15,9 +15,13 @@ import RuleBlock from "../components/RuleBlock.astro";
       </section>
       <section class="rule-card">
         <RuleBlock
-          name="Dim Light"
-          description="Creates a lightly obscured area. Creatures have Disadvantage on Perception checks that rely on sight. Examples include: patches of fog, sections of the Underdark, foliage, or dusk."
+          name="Obscured Light"
+          description="Creates a lightly obscured area. Creatures have Disadvantage on Perception checks that rely on sight and have a -5 penalty to their Passive Perception score."
         />
+        <p>
+          Examples include: dim light, patches of fog, sections of the
+          Underdark, foliage, or dusk.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
@@ -28,13 +32,13 @@ import RuleBlock from "../components/RuleBlock.astro";
       <section class="rule-card">
         <RuleBlock
           name="Seeing Underwater"
-          description="In clear water and bright light, a creature can perceive at 60 feet, in dim murky water at 10 feet, and 30 feet for any mixture of conditions in between."
+          description="In clear water and bright light, a creature can perceive at 60 feet, in obscured murky water at 10 feet, and 30 feet for any mixture of conditions in between."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
           name="Darkvision"
-          description="The creature can see in darkness as if it were dim light, within a specific radius. The creature can't discern color in darkness, only shades of gray."
+          description="The creature can see in darkness as if it were obscured light, within a specific radius. The creature can't discern color in darkness, only shades of gray."
         />
       </section>
       <section class="rule-card">
@@ -57,40 +61,81 @@ import RuleBlock from "../components/RuleBlock.astro";
       </section>
       <section class="rule-card">
         <RuleBlock
+          name="Percieving a creature"
+          description="Each character has three levels of perception for other creatures: located, detected, or hidden."
+        />
+        <RuleBlock
+          name="Located"
+          description="While a character has located a creature, that creature has no associated benefits or penalties. The character knows the creature’s location and can target them."
+        />
+        <RuleBlock
+          name="Detected"
+          description="When a character has detected a creature, they do not know the creature’s location but the character is aware the creature is nearby."
+        />
+        <p>
+          To target the detected creature the character must make a DC 15
+          (Survival or Investigation) check to deduce the creature's location.
+          If the character fails the check, they cannot target the creature.
+        </p>
+        <p>
+          If a detected creature takes damage, while it is not in darkness or
+          not invisible, the creature becomes located.
+        </p>
+        <p>
+          If the detected creature is in darkness or invisible, they remain
+          detected unless the attacker can see through darkness or invisibility.
+        </p>
+        <RuleBlock
+          name="Hidden"
+          description="If a creature is hidden from the character, the character is completely unaware of their presence."
+        />
+        <p>
+          Hidden creatures can choose to reveal their location and attack
+          unaware characters with Advantage, if they do the creature becomes
+          located. If they attack without Advantage the creature becomes
+          detected.
+        </p>
+        <p>
+          If a hidden creature takes damage from an area effect, they will make
+          noise or produce a visual disturbance, the creature becomes detected.
+          Nearby characters can roll a DC 15 (Perception) check to locate the
+          creature.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
           name="Torch"
-          description="A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
+          description="A torch burns for 1 hour, providing bright light in a 20-foot radius and obscured light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
           name="Candle"
-          description="For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
+          description="For 1 hour, a candle sheds bright light in a 5-foot radius and obscured light for an additional 5 feet."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
           name="Lamp"
-          description="A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+          description="A lamp casts bright light in a 15-foot radius and obscured light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
         />
       </section>
       <section class="rule-card">
         <RuleBlock
           name="Bullseye Lantern"
-          description="A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
+          description="A bullseye lantern casts bright light in a 60-foot cone and obscured light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
         />
       </section>
       <section class="rule-card">
         <RuleBlock name="Hooded Lantern" />
         <p>
-          A hooded lantern casts <span class="rule-name">bright light</span> in
-          a 30-foot radius and <span class="rule-name">dim light</span> for an
-          additional 30 feet.
+          A hooded lantern casts bright light in a 30-foot radius and obscured
+          light for an additional 30 feet.
         </p>
         <p>
           Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an
-          action, you can lower the hood, reducing the emitted light to <span
-            class="rule-name">dim light</span
-          > in a 5-foot radius.
+          action, you can lower the hood, reducing the emitted light to obscured
+          light in a 5-foot radius.
         </p>
       </section>
     </ul>
