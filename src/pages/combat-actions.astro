@@ -22,6 +22,23 @@ import Card from "../components/Card.astro";
       </section>
       <section class="rule-card">
         <RuleBlock
+          name="Disarm"
+          description="A creature, using the attack action, can use a melee attack to target a weapon or item within a target’s grasp. "
+        />
+        <p>
+          The attacker makes a disarming attack roll against the target’s AC.
+          This attack deals 0 damage and has no carry over effects. If the
+          attack is successful the defender must make a Strength Saving Throw.
+          The DC is equal to the attack roll and if they fail the item is
+          dropped.
+        </p>
+        <p>
+          The attacker has disadvantage on its attack roll if the target is
+          holding the item with two or more hands.
+        </p>
+      </section>
+      <section class="rule-card">
+        <RuleBlock
           name="Disengage"
           description="Your movement doesn’t provoke opportunity attacks for the rest of the turn."
         />
@@ -63,6 +80,10 @@ import Card from "../components/Card.astro";
           name="Hide"
           description="Make a Dexterity (Stealth) check in an attempt to become hidden."
         />
+        <p>
+          The roll total becomes your stealth DC and nearby creatures compare
+          their perception checks or passive perception.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock

@@ -24,9 +24,13 @@
 					id="nav-toggle-button"
 				/>
 			</label>
-			<label class="logo">D&D5e</label>
+			<a class="logo" href="/">Common5e</a>
+			<script>
+				document.querySelector(".logo").addEventListener("click", (event) => {
+					event.stopPropagation();
+				});
+			</script>
 			<ul class="nav-list">
-				<li><a class="nav-link" href="/">Home</a></li>
 				<li><a class="nav-link" href="/about/">About</a></li>
 				<li><a class="nav-link" href="/change-log/">Change Log</a></li>
 				<li><a class="nav-link" href="/what-is-dnd/">What is D&D?</a></li>
@@ -83,6 +87,11 @@
 	.spacer {
 		height: 5rem;
 	}
+	.logo {
+	}
+	.logo:visited {
+		color: white;
+	}
 	nav {
 		z-index: 2;
 		position: fixed;
@@ -109,7 +118,6 @@
 		display: inline-block;
 		font-weight: bold;
 		border-radius: 4px;
-		/* font-size: 1.2rem; */
 		padding: 1rem;
 		width: calc(100% - 2rem);
 		color: rgb(var(--accent-light));
@@ -132,11 +140,14 @@
 	}
 	.logo {
 		display: block;
-		font-size: 2rem;
+		font-size: 1.7rem;
 		line-height: 1rem;
 		padding: 1rem;
 		font-weight: bold;
+		text-decoration: none;
+		color: white;
 	}
+
 	.page-title {
 		padding: 1rem;
 		color: rgb(var(--accent-light));
