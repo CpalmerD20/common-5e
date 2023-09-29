@@ -26,8 +26,12 @@ import RuleBlock from "../components/RuleBlock.astro";
       <section class="rule-card">
         <RuleBlock
           name="Darkness"
-          description="Creates a heavily obscured area. Creatures in darkness automatically fail any ability check that requires sight, attack rolls against them have advantage, and their attack rolls have disadvantage."
+          description="Creates a heavily obscured area. Creatures in darkness automatically fail any ability checks that require sight and have disadvantage on their attack rolls."
         />
+        <p>
+          While a creature is in darkness, it cannot be located except by
+          creatures who can percieve through darkness.
+        </p>
       </section>
       <section class="rule-card">
         <RuleBlock
@@ -68,14 +72,20 @@ import RuleBlock from "../components/RuleBlock.astro";
           name="Located"
           description="While a character has located a creature, that creature has no associated benefits or penalties. The character knows the creature’s location and can target them."
         />
+        <p>
+          A character can use an action to locate a detected or hidden creature.
+          If they do, they must roll a perception check against the creature's
+          stealth DC.
+        </p>
         <RuleBlock
           name="Detected"
           description="When a character has detected a creature, they do not know the creature’s location but the character is aware the creature is nearby."
         />
         <p>
-          To target the detected creature the character must make a DC 15
-          (Survival or Investigation) check to deduce the creature's location.
-          If the character fails the check, they cannot target the creature.
+          Any time a character tries target a detected creature they must make a
+          DC 15 (Survival or Investigation) check to deduce the creature's
+          location. If the character fails the check, they cannot target the
+          creature.
         </p>
         <p>
           If a detected creature takes damage, while it is not in darkness or
@@ -83,24 +93,23 @@ import RuleBlock from "../components/RuleBlock.astro";
         </p>
         <p>
           If the detected creature is in darkness or invisible, they remain
-          detected unless the attacker can see through darkness or invisibility.
+          detected while the attacker cannot see through darkness or
+          invisibility.
         </p>
         <RuleBlock
           name="Hidden"
-          description="If a creature is hidden from the character, the character is completely unaware of their presence."
+          description="When a creature is hidden from the character, the character is completely unaware of their presence."
         />
         <p>
-          Hidden creatures can choose to reveal their location and attack
-          unaware characters with Advantage, if they do the creature becomes
-          located. If they attack without Advantage the creature becomes
-          detected.
+          Hidden creatures attack unaware targets with Advantage. After the
+          attack resolves the creature becomes detected.
         </p>
         <p>
-          If a hidden creature takes damage from an area effect, they will make
-          noise or produce a visual disturbance, the creature becomes detected.
-          Nearby characters can roll a DC 15 (Perception) check to locate the
-          creature.
+          If a hidden creature takes damage from an any source they will make
+          noise, or produce a visual disturbance, and the creature becomes
+          detected.
         </p>
+        <!-- TODO casting a spell -->
       </section>
       <section class="rule-card">
         <RuleBlock
